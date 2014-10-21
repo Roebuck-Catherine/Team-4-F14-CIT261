@@ -53,6 +53,8 @@ if($_POST['action']=='Login'){
 }
 
 if ($_POST['action']=='Create Account'){
+    // ADD CHECK TO MAKE SURE ACCOUNT DOES NOT ALREADY EXIST!
+    
     $organizationName = verifyString($_POST['organizationName']);
     $orgPswd = addslashes($_POST['orgPswd']);
     $orgPswd2 = addslashes($_POST['orgPswd2']);
@@ -89,11 +91,13 @@ if ($_POST['action']=='Create Account'){
     
     if ($result){
         $_SESSION['message'] = 'User Added Successfully';
-        echo 'it was successful';
+        header('Location: /');
+        exit;
     }
     else {
-        $_SESSION['message'] = 'Error Adding user';
-        echo 'it wasn\'t successful';
+        $errors = 'Error Adding user, Please Try Again.';
+        include '/createAccount';
+        exit;
     }
 }
 
