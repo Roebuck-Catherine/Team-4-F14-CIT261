@@ -1,6 +1,3 @@
-<div id='header'>
-    Tally
-</div>
 <div id="menuButtonStyle">Menu</div>
 <div id="menuButton"><a href="#menu"></a></div> 
 <nav id="menu">
