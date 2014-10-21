@@ -1,5 +1,7 @@
 <div id="menuButtonStyle">Menu</div>
 <div id="menuButton"><a href="#menu"></a></div> 
+
+<!-- Navigation -->
 <nav id="menu">
     <ul>
         <li class="Label">Main Menu</li>
@@ -8,6 +10,9 @@
         <li><a href="/"><img class="menuImg" src="/images/interval.png" alt="Interval Image"/>Change Interval</a></li>
         <li><a href="/"><img class="menuImg" src="/images/submit.png" alt="Submit Image"/>Submit Count</a></li>
         <li class="Spacer"></li>
-        <li><a href="/"><img class="menuImg" src="/images/White Lock.png" alt="Logout Image"/>Logout</a></li>
+        <li><a <?php if($_SESSION['is_logged_in'] == 1){echo 'href="/account/?action=logout"';} else{echo 'href="/"';}?>><img class="menuImg" src="/images/White Lock.png" alt="Logout Image"/>
+            <?php if($_SESSION['is_logged_in'] == 1){echo 'Logout';}
+            else{echo 'Account Login';}
+            ?></a></li>
     </ul>
 </nav>

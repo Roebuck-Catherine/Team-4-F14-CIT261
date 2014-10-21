@@ -12,18 +12,22 @@ label{
 input {
     clear: left;
     float: left;
-    padding: 5px 5px;
-    border: none;
+    padding: 3px 5px;
     border-radius: 2px;
     -moz-border-radius: 2px;
 }
 
 .field {
     width: 200px;
+    border: 1px solid #ffffff;
+}
+
+.field:focus {
+    border: 1px solid #ffffff;
 }
 
 #action {
-    padding: 2px 10px;
+    padding: 5px 10px;
     margin-bottom: 50px;
     margin-left: 100px; 
     border: none;
@@ -31,4 +35,9 @@ input {
     color: #ffffff;
     padding: 5px 20px;
     width: 150px;
+}
+
+#errors {
+    font-family: p1;
+    color: #e50000;
 }
