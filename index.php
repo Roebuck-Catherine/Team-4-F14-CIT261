@@ -2,12 +2,12 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Tally</title>
+        <title>Tally, The new way to count</title>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
-        This is where text goes. like me!
+        <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
+        
+        
     </body>
 </html>
