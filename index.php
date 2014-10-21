@@ -8,6 +8,6 @@
         <?php
         // put your code here
         ?>
-        This is where text goes.
+        This is where text goes. like me!
     </body>
 </html>
