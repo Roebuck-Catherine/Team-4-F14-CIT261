@@ -81,7 +81,7 @@ if ($_POST['action']=='Create Account'){
     }
     
     if (isset($errors)){
-        include '/createAccount.php';
+        include 'createAccount.php';
         exit;
     }
     
