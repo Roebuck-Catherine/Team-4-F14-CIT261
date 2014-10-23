@@ -9,7 +9,7 @@
     <body>
         <div>
             <div id='header'>
-               Create Account
+               Create Account HERE
             </div>
             <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
 
