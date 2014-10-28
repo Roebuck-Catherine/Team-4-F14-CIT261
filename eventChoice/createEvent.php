@@ -1,11 +1,11 @@
 <?php 
-if(!$_SESSION){
-   session_start();
+if (!$_SESSION) {
+    session_start();
 }
-if (!$_SESSION['is_logged_in'] == 1 ){
+if (!$_SESSION['is_logged_in'] == 1 ) {
      header('Location: ../index.php');
      exit;
- }
+}
 
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
     <head>
         <meta charset="UTF-8">
         <title>Choose Event Type</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>
@@ -21,26 +21,26 @@ if (!$_SESSION['is_logged_in'] == 1 ){
             <div id='header'>
                Event Type
             </div>
-            <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
+            <?php require $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
             <main>
                 <div id="errors"><?php echo $errors?></div>
                 <form method="post" action="/accounts/" id="login" name="createAccount">
                     <h1>Create Event</h1>
 
-                    <label for="discountAmount">Organization Name</label>
-                    <input class="field" type="text" style="<?php echo $orgError ?>" name="organizationName" id="organizationName" value="<?php echo $organizationName ?>">
+                    <label for="eventName">Event Name<span class="required">*</span></span></span></label>
+                    <input class="field" type="text" style="<?php echo $eventNameError ?>" name="eventName" id="eventName" value="<?php echo $eventName ?>">
 
-                    <label for='orgPswd'>Organization Password</label>
-                    <input class="field" type='password' style='<?php echo $pswdError ?>' name='orgPswd' id='orgPswd' value='<?php echo $orgPswd?>'>
+                    <label for='eventDate'>Event Date</label>
+                    <input class="field" type='date' style='<?php echo $eventDateError ?>' name='eventDate' id='eventDate' value='<?php echo $eventDate?>'>
 
-                    <label for='orgPswd2'>Confirm Password</label>
-                    <input class="field" type='password' style='<?php echo $pswd2Error ?>' name='orgPswd2' id='orgPswd2' value='<?php echo $orgPswd2?>'>
+                    <label for='eventLocation'>Event Location</label>
+                    <input class="field" type='text' style='<?php echo $eventLocationError ?>' name='eventLocation' id='eventLocation' value='<?php echo $eventLocation?>'>
 
                     <label for="action">&nbsp;</label>
-                    <input type="submit" name="action" id="action" value="Create Account"/>
+                    <input type="submit" name="action" id="action" value="Create Event"/>
                 </form>
             </main>
         </div>
-    </body
+    </body>
     <?php unset($_SESSION['message']);?>
 </html>

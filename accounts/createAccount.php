@@ -18,7 +18,7 @@
                 <form method="post" action="/accounts/" id="login" name="createAccount">
                     <h1>Create Account</h1>
 
-                    <label for="discountAmount">Organization Name</label>
+                    <label for="organizationName">Organization Name</label>
                     <input class="field" type="text" style="<?php echo $orgError ?>" name="organizationName" id="organizationName" value="<?php echo $organizationName ?>">
 
                     <label for='orgPswd'>Organization Password</label>
