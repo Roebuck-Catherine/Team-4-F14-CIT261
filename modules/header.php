@@ -7,7 +7,7 @@
         <li class="Label">Main Menu</li>
         <?php if($_SESSION['is_logged_in'] == 1){?>
             <li><a href="/countScreen"><img class="menuImg" src="/images/count.png" alt="Calendar Image"/>Counter</a></li>
-            <li><a href="/"><img class="menuImg" src="/images/calendar.png" alt="Calendar Image"/>Event Choice Menu</a></li>
+            <li><a href="/eventChoice"><img class="menuImg" src="/images/calendar.png" alt="Calendar Image"/>Event Choice Menu</a></li>
             <li><a href="/"><img class="menuImg" src="/images/undo.png" alt="Reset Image"/>Reset Count to Zero</a></li>
             <li><a href="/"><img class="menuImg" src="/images/interval.png" alt="Interval Image"/>Change Count Interval</a></li>
             <li><a href="/"><img class="menuImg" src="/images/submit.png" alt="Submit Image"/>Submit Final Count</a></li>

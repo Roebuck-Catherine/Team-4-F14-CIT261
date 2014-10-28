@@ -41,7 +41,8 @@ if($_POST['action']=='Login'){
     
     if($validPswd){
         $_SESSION['is_logged_in'] = 1;
-        header('Location: /countScreen');
+        $_SESSION['username'] = $username;
+        header('Location: /eventChoice');
         exit;
     }
     

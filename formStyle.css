@@ -27,7 +27,6 @@ input {
 }
 
 #action {
-    padding: 5px 10px;
     margin-bottom: 50px;
     margin-left: 100px; 
     border: none;
@@ -40,4 +39,16 @@ input {
 #errors {
     font-family: p1;
     color: #e50000;
+}
+
+.choiceButton {
+    margin-bottom: 20px;
+    margin-left: 0px; 
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 30px;
+    display:  block;
+    width: 250px;
+    clear:  left;
 }
