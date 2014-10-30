@@ -23,13 +23,13 @@ if(!$_SESSION){
                     <h1>Account Login</h1>
 
                     <label for="name">Username<span class="required">*</span></label>
-                    <input class="field" type="text" autofocus style="<?php echo $usernameError ?>" name="username" id="username" value="<?php echo $username ?>">
+                    <input class="field" type="text" placeholder="Your Name" autofocus style="<?php echo $usernameError ?>" name="username" id="username" value="<?php echo $username ?>">
 
                     <label for="discountAmount">Organization Name<span class="required">*</span></label>
-                    <input class="field" type="text" style="<?php echo $orgError ?>" name="orgName" id="orgName" value="<?php echo $orgName ?>">
+                    <input class="field" type="text" placeholder="i.e. BYU-Idaho" style="<?php echo $orgError ?>" name="orgName" id="orgName" value="<?php echo $orgName ?>">
 
                     <label for='orgPswd'>Organization Password<span class="required">*</span></label>
-                    <input class="field" type='password' style='<?php echo $orgPswdError ?>' name='orgPswd' id='orgPswd' value='<?php echo $orgPswd?>'>
+                    <input class="field" type='password' placeholder="Get From Admin" style='<?php echo $orgPswdError ?>' name='orgPswd' id='orgPswd' value='<?php echo $orgPswd?>'>
 
                     <label for="action">&nbsp;</label>
                     <input type="submit" name="action" id="action" value="Login"/>

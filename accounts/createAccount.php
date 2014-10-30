@@ -22,7 +22,7 @@
                     <input class="field" type="text" style="<?php echo $adminNameError ?>" name="adminName" id="adminName" value="<?php echo $adminName ?>">
                     
                     <label for="adminEmail">Admin Email<span class="required">*</span></label>
-                    <input class="field" type="email" style="<?php echo $emailError ?>" name="adminEmail" id="adminEmail" value="<?php echo $adminEmail ?>">
+                    <input class="field" type="email" placeholder="example@gmail.com" style="<?php echo $emailError ?>" name="adminEmail" id="adminEmail" value="<?php echo $adminEmail ?>">
                     
                     <label for='adminPswd'>Admin Password<span class="required">*</span></label>
                     <input class="field" type='password' style='<?php echo $adminPswdError ?>' name='adminPswd' id='adminPswd' value='<?php echo $adminPswd?>'>
@@ -31,7 +31,7 @@
                     <input class="field" type='password' style='<?php echo $adminPswd2Error ?>' name='adminPswd2' id='adminPswd2' value='<?php echo $adminPswd2?>'>
                     
                     <label for="organizationName">Organization Name<span class="required">*</span></label>
-                    <input class="field" type="text" style="<?php echo $orgError ?>" name="organizationName" id="organizationName" value="<?php echo $organizationName ?>">
+                    <input class="field" type="text" placeholder="i.e. BYU-Idaho" style="<?php echo $orgError ?>" name="organizationName" id="organizationName" value="<?php echo $organizationName ?>">
                     
                     <label for='orgPswd'>Organization Password<span class="required">*</span></label>
                     <input class="field" type='password' style='<?php echo $pswdError ?>' name='orgPswd' id='orgPswd' value='<?php echo $orgPswd?>'>
