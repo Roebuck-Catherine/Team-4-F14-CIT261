@@ -55,12 +55,37 @@ if($_POST['action']=='Login'){
 
 if ($_POST['action']=='Create Account'){
     // ADD CHECK TO MAKE SURE ACCOUNT DOES NOT ALREADY EXIST!
+    $adminName = verifyString($_POST['adminName']);
+    $adminEmail = verifyEmail($_POST['adminEmail']);
+    $adminPswd = addslashes($_POST['adminPswd']);
+    $adminPswd2 = addslashes($_POST['adminPswd2']);
     
     $organizationName = verifyString($_POST['organizationName']);
     $orgPswd = addslashes($_POST['orgPswd']);
     $orgPswd2 = addslashes($_POST['orgPswd2']);
     
     //Form Pre-Submit Validation
+    if (empty($adminName)) {
+        $adminNameError = $errorStyle;
+        $errors .= "Please enter your admin name<br>";
+    }
+    if (empty($adminEmail)) {
+        $emailError = $errorStyle;
+        $errors .= "Please enter your admin email<br>";
+    }
+    if (empty($adminPswd)) {
+        $adminPswdError = $errorStyle;
+        $errors .= "Please enter your admin password<br>";
+    }
+    if (empty($adminPswd2)) {
+        $adminPswd2Error = $errorStyle;
+        $errors .= "Please verify your admin password<br>";
+    }
+    if ($adminPswd != $adminPswd2){
+        $adminPswd2Error = $errorStyle;
+        $errors .= "Admin passwords must match<br>";
+    }
+    
     if (empty($organizationName)){
         $orgError = $errorStyle;
         $errors .= "Please enter an organization name<br>";
@@ -73,12 +98,12 @@ if ($_POST['action']=='Create Account'){
     
     if (empty($orgPswd2)){
         $pswd2Error = $errorStyle;
-        $errors .= "Please verify your password<br>";
+        $errors .= "Please verify your org. password<br>";
     }
     
     if ($orgPswd != $orgPswd2){
         $pswd2Error = $errorStyle;
-        $errors .= "Passwords must match<br>";
+        $errors .= "Organizations passwords must match<br>";
     }
     
     if (isset($errors)){
@@ -86,9 +111,10 @@ if ($_POST['action']=='Create Account'){
         exit;
     }
     
+    $adminPass = hashPassword($adminPswd);
     $orgPass = hashPassword($orgPswd);
     
-    $result = addUser($organizationName, $orgPass);
+    $result = addUser($organizationName, $orgPass, $adminName, $adminEmail, $adminPass);
     
     if ($result){
         $_SESSION['message'] = 'User Added Successfully';
