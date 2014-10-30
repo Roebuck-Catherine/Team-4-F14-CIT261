@@ -12,28 +12,28 @@ if (!$_SESSION['is_logged_in'] == 1 ) {
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Choose Event Type</title>
+        <title>Create Event</title>
         <?php require $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>
         <div>
             <div id='header'>
-               Event Type
+               Create Event
             </div>
             <?php require $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
             <main>
                 <div id="errors"><?php echo $errors?></div>
-                <form method="post" action="/accounts/" id="login" name="createAccount">
+                <form method="post" action="." id="createEvent" name="createEvent">
                     <h1>Create Event</h1>
 
                     <label for="eventName">Event Name<span class="required">*</span></span></span></label>
                     <input class="field" type="text" style="<?php echo $eventNameError ?>" name="eventName" id="eventName" value="<?php echo $eventName ?>">
 
-                    <label for='eventDate'>Event Date</label>
+                    <label for='eventDate'>Event Date<span class="required">*</span></label>
                     <input class="field" type='date' style='<?php echo $eventDateError ?>' name='eventDate' id='eventDate' value='<?php echo $eventDate?>'>
 
-                    <label for='eventLocation'>Event Location</label>
+                    <label for='eventLocation'>Event Location<span class="required">*</span></label>
                     <input class="field" type='text' style='<?php echo $eventLocationError ?>' name='eventLocation' id='eventLocation' value='<?php echo $eventLocation?>'>
 
                     <label for="action">&nbsp;</label>

@@ -49,3 +49,25 @@ function getServerPass($orgName){
         $_SESSION['message']='Sorry, and error occured with the database.';
     }
 }
+
+function getOrgId($orgName){
+    $conn= databaseConnection();
+    try{
+        $sql = 'SELECT org_id FROM organizations WHERE orgName = :orgName';
+        
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(':orgName', $orgName, PDO::PARAM_STR);
+        $stmt->execute();
+        $data = $stmt->fetch();
+        $stmt->closeCursor();
+        
+    } catch (PDOException $ex) {
+        $message = 'Sorry, There was an error';
+    }
+    if(is_array($data)){
+        return $data[0];
+    }
+    else{
+        $_SESSION['message']='Sorry, and error occured with the database.';
+    }
+}

@@ -7,8 +7,6 @@ if(!$_SESSION){
     
 require $_SERVER['DOCUMENT_ROOT'].'/accounts/model.php';
 
-$errorStyle = 'border: 2px solid #e50000';
-
 if($_POST['action']=='Login'){
     $username = verifyString($_POST['username']);
     $orgName = verifyString($_POST['orgName']);
@@ -42,6 +40,7 @@ if($_POST['action']=='Login'){
     if($validPswd){
         $_SESSION['is_logged_in'] = 1;
         $_SESSION['username'] = $username;
+        $_SESSION['orgId'] = getOrgId($orgName);
         header('Location: /eventChoice');
         exit;
     }
@@ -93,7 +92,7 @@ if ($_POST['action']=='Create Account'){
     
     if (empty($orgPswd)){
         $pswdError = $errorStyle;
-        $errors .= "Please enter a password<br>";
+        $errors .= "Please enter your org. password<br>";
     }
     
     if (empty($orgPswd2)){

@@ -52,3 +52,7 @@ function verifyInt($int){
     $int = filter_var($int, FILTER_SANITIZE_NUMBER_INT);
     return $int;
 }
+
+
+//global variables
+$errorStyle = 'border: 2px solid #e50000';
