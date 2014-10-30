@@ -30,7 +30,7 @@ if (!$_SESSION['is_logged_in'] == 1 ) {
                     <label for="eventName">Event Name<span class="required">*</span></span></span></label>
                     <input class="field" type="text" style="<?php echo $eventNameError ?>" name="eventName" id="eventName" value="<?php echo $eventName ?>">
 
-                    <label for='eventDate'>Event Date<span class="required">*</span></label>
+                    <label for='eventDate'>Event Date (YYYY-MM-DD)<span class="required">*</span></label>
                     <input class="field" type='date' style='<?php echo $eventDateError ?>' name='eventDate' id='eventDate' value='<?php echo $eventDate?>'>
 
                     <label for='eventLocation'>Event Location<span class="required">*</span></label>
