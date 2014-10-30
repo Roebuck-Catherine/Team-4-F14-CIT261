@@ -22,13 +22,13 @@ if(!$_SESSION){
                 <form method="post" action="/accounts/" id="login" name="loginForm">
                     <h1>Account Login</h1>
 
-                    <label for="name">Username</label>
+                    <label for="name">Username<span class="required">*</span></label>
                     <input class="field" type="text" autofocus style="<?php echo $usernameError ?>" name="username" id="username" value="<?php echo $username ?>">
 
-                    <label for="discountAmount">Organization Name</label>
+                    <label for="discountAmount">Organization Name<span class="required">*</span></label>
                     <input class="field" type="text" style="<?php echo $orgError ?>" name="orgName" id="orgName" value="<?php echo $orgName ?>">
 
-                    <label for='orgPswd'>Organization Password</label>
+                    <label for='orgPswd'>Organization Password<span class="required">*</span></label>
                     <input class="field" type='password' style='<?php echo $orgPswdError ?>' name='orgPswd' id='orgPswd' value='<?php echo $orgPswd?>'>
 
                     <label for="action">&nbsp;</label>

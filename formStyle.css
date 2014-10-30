@@ -52,3 +52,10 @@ input {
     width: 250px;
     clear:  left;
 }
+
+.required {
+    font-family: p1;
+    font-size: 8pt;
+    color: #00cc00;
+    vertical-align:top;
+}
