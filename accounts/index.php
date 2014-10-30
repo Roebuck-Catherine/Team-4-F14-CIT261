@@ -117,12 +117,12 @@ if ($_POST['action']=='Create Account'){
     
     if ($result){
         $_SESSION['message'] = 'User Added Successfully';
-        header('Location: /');
+        header('Location: /index.php');
         exit;
     }
     else {
         $errors = 'Error Adding user, Please Try Again.';
-        include '/createAccount';
+        include 'createAccount';
         exit;
     }
 }
