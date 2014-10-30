@@ -27,13 +27,13 @@ input {
 }
 
 #action {
-    margin-bottom: 50px;
-    margin-left: 100px; 
+    margin-bottom: 20px;
+    margin-left: 0px; 
     border: none;
     background-color: #000000;
     color: #ffffff;
-    padding: 5px 20px;
-    width: 150px;
+    padding: 12px 20px;
+    width: 100%;
 }
 
 #errors {
