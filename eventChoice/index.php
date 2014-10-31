@@ -43,7 +43,6 @@ if ($_POST['action']== 'Create Event') {
         exit;
     }
 }
-
 else {
     include 'choiceScreen.php'; 
 }
