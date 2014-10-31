@@ -33,15 +33,20 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                             <div>
                                     <a href="#close" title="Close" class="close">X</a>
                                     <h2>Join Event</h2>
-                                    <p>List of the Organizations Events</p>
+                                    <p>List of the Organizations Events</p> 
+                                        <ul>
+                                            <li>Event 1</li>
+                                            <li>Event 2</li>
+                                        </ul>
+                                    
                                     <?php 
-                                        //List of the Events for Organization
-                                        //
-                                        //$userMatchingEvents = getEvents($_SESSION['orgId']);
+                                        /*List of the Events for Organization from database
                                         
-                                        //foreach ($userMatchingEvents as $userMatchingEvent){
-                                            //echo $userMatchingEvent;
-                                        //}
+                                        $userMatchingEvents = getEvents($_SESSION['orgId']);
+                                        
+                                        foreach ($userMatchingEvents as $userMatchingEvent){
+                                            echo $userMatchingEvent;
+                                        }*/
                                     ?>
                             </div>
                     </div>
