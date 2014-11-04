@@ -1,4 +1,4 @@
 <?php
 
-    include 'join.php';
+    require 'join.php';
 

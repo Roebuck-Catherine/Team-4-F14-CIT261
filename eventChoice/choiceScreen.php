@@ -31,12 +31,13 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                 
                     <div id="openJoin" class="modalDialog">
                             <div>
-                                    <a href="#close" title="Close" class="close">X</a>
+                                    <a href="#close" title="Close" class="close"></a>
                                     <h2>Join Event</h2>
                                     <p>List of the Organizations Events</p> 
                                         <ul>
                                             <li>Event 1</li>
                                             <li>Event 2</li>
+                                            <li>Event 3</li>
                                         </ul>
                                     
                                     <?php 
