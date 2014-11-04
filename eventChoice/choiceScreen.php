@@ -4,8 +4,10 @@ if(!$_SESSION){
 }
 if (!$_SESSION['is_logged_in'] == 1 ){
      header('Location: ../index.php');
+     echo "were not logged in";
      exit;
  }
+// include $_SERVER['DOCUMENT_ROOT'].'/eventChoice/model.php';
 
 ?>
 <!DOCTYPE html>
@@ -25,9 +27,31 @@ if (!$_SESSION['is_logged_in'] == 1 ){
             <main>
                 <div id="errors"><?php echo $errors?></div>
                 <button onclick="document.location='createEvent.php'" class="choiceButton">Create New Event</button>
-                <button onclick="document.location='/'" class="choiceButton">Join Existing Event</button>
+                <button onclick="document.location='#openJoin'" class="choiceButton">Join Existing Event</button>
+                
+                    <div id="openJoin" class="modalDialog">
+                            <div>
+                                    <a href="#close" title="Close" class="close">X</a>
+                                    <h2>Join Event</h2>
+                                    <p>List of the Organizations Events</p> 
+                                        <ul>
+                                            <li>Event 1</li>
+                                            <li>Event 2</li>
+                                        </ul>
+                                    
+                                    <?php 
+                                        /*List of the Events for Organization from database
+                                        
+                                        $userMatchingEvents = getEvents($_SESSION['orgId']);
+                                        
+                                        foreach ($userMatchingEvents as $userMatchingEvent){
+                                            echo $userMatchingEvent;
+                                        }*/
+                                    ?>
+                            </div>
+                    </div>
             </main>
         </div>
-    </body
+    </body>
     <?php unset($_SESSION['message']);?>
 </html>
