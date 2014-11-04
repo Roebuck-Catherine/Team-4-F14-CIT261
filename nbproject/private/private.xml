@@ -4,8 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/Team-4-F14-CIT261/style.css</file>
-            <file>file:/C:/xampp/htdocs/Team-4-F14-CIT261/about/index.php</file>
-            <file>file:/C:/xampp/htdocs/Team-4-F14-CIT261/modules/header.php</file>
+            <file>file:/C:/xampp/htdocs/Team-4-F14-CIT261/countScreen/count.php</file>
+            <file>file:/C:/xampp/htdocs/Team-4-F14-CIT261/eventChoice/chooseEvent.php</file>
+            <file>file:/C:/xampp/htdocs/Team-4-F14-CIT261/eventChoice/choiceScreen.php</file>
+            <file>file:/C:/xampp/htdocs/Team-4-F14-CIT261/eventChoice/createEvent.php</file>
         </group>
     </open-files>
 </project-private>

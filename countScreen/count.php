@@ -1,10 +1,10 @@
 <?php 
-//if(!$_SESSION){
- //  session_start();
-//}
-//if (!$_SESSION['is_logged_in'] == 1 ){
-//     exit;
- //}
+if(!$_SESSION){
+   session_start();
+}
+if (!$_SESSION['is_logged_in'] == 1 ){
+     exit;
+ }
 
 ?>
 <!DOCTYPE html>
@@ -29,5 +29,5 @@
                 <div id="minus">-</div>
                 <div id="plus">+</div>
         	</div>
-    </body
+    </body>
 </html>
