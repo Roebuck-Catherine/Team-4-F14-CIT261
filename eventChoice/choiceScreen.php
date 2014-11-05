@@ -31,9 +31,9 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                 
                     <div id="openJoin" class="modalDialog">
                         <div>
-                            <a href="#close" title="Close" class="close"></a>
+                            <a href="#close" title="Close" class="close">Cancel</a>
                             <h2>Join Event</h2>
-                            <p>List of the Organizations Events</p> 
+                            <p>Please select an event</p> 
                                 <?php echo $output?>
                         </div>
                     </div>
