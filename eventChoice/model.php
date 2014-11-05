@@ -49,24 +49,24 @@ function eventId($eventName){
 
 //function to get list from the data base
 
-/*function getEvents($orgId){
+function getEvents($orgId){
        $conn= databaseConnection();
     try{
-        $sql = 'SELECT eventName FROM events WHERE orgId = :myOrgId';
+        $sql = "SELECT event_id, eventName, eventDate FROM events WHERE orgId = :myOrgId AND eventDate >= (DATE_FORMAT((TIMESTAMPADD(HOUR,-7, UTC_TIMESTAMP())), '%Y-%m-%d')) ORDER BY eventDate ASC";
         
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(':myOrgId', $orgId, PDO::PARAM_STR);
         $stmt->execute();
-        $data = $stmt->fetch();
+        $data = $stmt->fetchAll();
         $stmt->closeCursor();
         
     } catch (PDOException $ex) {
         $message = 'Sorry, There was an error';
     }
     if(is_array($data)){
-        return $data[0];
+        return $data;
     }
     else{
         $_SESSION['message']='Sorry, and error occured with the database.';
     }
-}*/
+}

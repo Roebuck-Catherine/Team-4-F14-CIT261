@@ -30,26 +30,12 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                 <button onclick="document.location='#openJoin'" class="choiceButton">Join Existing Event</button>
                 
                     <div id="openJoin" class="modalDialog">
-                            <div>
-                                    <a href="#close" title="Close" class="close"></a>
-                                    <h2>Join Event</h2>
-                                    <p>List of the Organizations Events</p> 
-                                        <ul>
-                                            <li>Event 1</li>
-                                            <li>Event 2</li>
-                                            <li>Event 3</li>
-                                        </ul>
-                                    
-                                    <?php 
-                                        /*List of the Events for Organization from database
-                                        
-                                        $userMatchingEvents = getEvents($_SESSION['orgId']);
-                                        
-                                        foreach ($userMatchingEvents as $userMatchingEvent){
-                                            echo $userMatchingEvent;
-                                        }*/
-                                    ?>
-                            </div>
+                        <div>
+                            <a href="#close" title="Close" class="close"></a>
+                            <h2>Join Event</h2>
+                            <p>List of the Organizations Events</p> 
+                                <?php echo $output?>
+                        </div>
                     </div>
             </main>
         </div>

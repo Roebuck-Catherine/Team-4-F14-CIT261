@@ -139,7 +139,7 @@ h2.count {
 
 .modalDialog {
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, p1;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -171,10 +171,18 @@ h2.count {
 	background: -o-linear-gradient(#fff, #999);
 }
 
+.modalDialog h2 {
+    color: #000000;
+}
+
+.modalDialog p {
+    color: #000000;
+}
+
 .close {
 	background: none;
 	position: fixed;
-        z-index: -2;
+        z-index: -1;
 	right: -12px;
 	text-align: center;
 	top: 0px;
@@ -186,6 +194,25 @@ h2.count {
 	-moz-border-radius: 12px;
 }
 
+#eventList{
+    list-style: none;
+    line-height: 40px;
+}
+
+ul, menu, dir {
+    -webkit-padding-start: 0px;
+    text-align: center;
+}
+
+#eventList a{
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}
+
+#eventList li{
+    border-bottom: 1px solid black;
+}
 
 //________________original settings below (PROPOSED CHANGES ABOVE)____________________
 

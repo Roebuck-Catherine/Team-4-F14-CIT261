@@ -44,6 +44,16 @@ if ($_POST['action']== 'Create Event') {
     }
 }
 else {
+    //gets only events that are for the organization and events that are not of a past date.
+    $events = getEvents($_SESSION['orgId']);
+    
+    $output = "<ul id='eventList'>";
+        foreach ($events as $event){
+            $currdate = date('m/d/Y', strtotime($event[2]));
+            $output .= "<li><a href='$event[0]'>$event[1] $currdate</a></li>";
+        }
+    $output .="</ul>";
+
     include 'choiceScreen.php'; 
 }
    
