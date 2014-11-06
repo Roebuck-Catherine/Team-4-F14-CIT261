@@ -35,7 +35,6 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                 <div id="errors"><?php echo $errors?></div>
                 <h2 class="count">Your Count</h2>
                 <div id="personalCount"></div>
-                <div id="odometer" class="odometer">0</div>
                 <h2 class="count">Total</h2>
                 <div id="totalCount"></div>
             </div>
