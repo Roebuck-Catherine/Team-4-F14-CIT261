@@ -11,3 +11,7 @@
                 $('nav#menu').mmenu();
         });
 </script>
+
+
+<!-- Count Functions-->
+<script type='text/javascript' src='/countScreen/countAlter.js'></script>

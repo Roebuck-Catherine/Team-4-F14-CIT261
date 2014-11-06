@@ -38,8 +38,21 @@ body{
     padding-top: 5px;
 }
 
+#menu {
+    position: absolute;
+    z-index: 0;
+}
+
 main {
-    margin: 30px 50px 30px 50px;
+    margin: 30px auto 30px auto;
+}
+
+main form {
+    width: 250px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p {
@@ -48,7 +61,10 @@ p {
 }
 
 .fineprint {
+    clear: left;
+    display: block;
     font-size: 10pt;
+    text-align: center;
 }
 
 a {
@@ -71,50 +87,66 @@ h2 {
 }
 
 /*Counter Screen Styling*/
+div.count{
+    min-height: 315px;
+}
+
 h2.count {
-    margin: 20px;
+    margin: 5px 20px 5px 20px;
     font-family: p1;
+    position: relative;
+    z-index: -1;
 }
 
 #personalCount {
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 62px;
     text-align: right;
     padding-right: 5px;
     border-radius: 4px;
     border: 2px solid black;
     height: 70px;
-    width: 250px;
+    width: 85%;
     background: -webkit-linear-gradient(#BFBFBF, #58A831); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#BFBFBF, #58A831); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#BFBFBF, #58A831); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#BFBFBF, #58A831); /* Standard syntax */
+    position: relative;
+    z-index: -1;
 }
 
 #totalCount {
-    margin-left: 20px;
-    font-size: 62px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 45px;
     text-align: right;
     padding-right: 5px;
     border-radius: 4px;
     border: 2px solid black;
-    height: 70px;
-    width: 250px;
+    height: 50px;
+    width: 85%;
     background: -webkit-linear-gradient(#BFBFBF, #798075); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#BFBFBF, #798075); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#BFBFBF, #798075); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#BFBFBF, #798075); /* Standard syntax */
+    position: relative;
+    z-index: -1;
 }
 
 #minus {
+    position: fixed;
+        bottom: 0px;
+        left: 0px;
+    z-index: -1;
     float:left;
     color: #940000;
-    font-size:93px;
+    font-size:300%;
     text-align: center;
     margin-top:20px;
-    margin-left:20px;
-    width:125px;
-    height:125px;
+    width:50%;
+    max-width: 50%;
+    height:115px;
     border:2px solid black;
     background: -webkit-linear-gradient(#696969, #121212); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#696969, #121212); /* For Opera 11.1 to 12.0 */
@@ -123,14 +155,19 @@ h2.count {
 }
 
 #plus {
-    float:left;
+    position: fixed;
+        bottom: 0px;
+        right: 0px;
+    z-index: -1;
+    float:right;
     color: #038703;
-    font-size:105px;
+    font-size:300%;
     font-weight: bold;
     text-align: center;
     margin-top:20px;
-    width:125px;
-    height:125px;
+    width:50%;
+    max-width: 50%;
+    height:115px;
     border:2px solid black;
     background: -webkit-linear-gradient(#696969, #121212); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#696969, #121212); /* For Opera 11.1 to 12.0 */
