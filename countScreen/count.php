@@ -28,7 +28,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
     <body>
         <div>
         <div id='header'>
-               <?php echo $_SESSION['eventName']?> Count
+               Counting For: <?php echo $_SESSION['eventName']?>
         </div>
             <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
             <div class="count">
