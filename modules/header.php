@@ -21,9 +21,11 @@
             <li><a href="../accounts/createAccount.php"><img class="menuImg" src="/images/count.png" alt="Create Account Image"/>Create an Account</a></li>
         <?php } ?>    
     </ul>
-    <!--<div id='openInterval' class='modalDialog'>
+</nav>
+<div id='openInterval' class='modalDialog'>
+    <div>
         <a href ='#close' title='Close' class='close'>Cancel</a>
         <h2>Change Interval</h2>
         <p>Count by </p>
-    </div>-->
-</nav>
+    </div>
+</div>
