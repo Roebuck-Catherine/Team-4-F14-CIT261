@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="/library/manifest.appcache">
     <head>
         <meta charset="UTF-8">
         <title>Tally, The new way to count</title>

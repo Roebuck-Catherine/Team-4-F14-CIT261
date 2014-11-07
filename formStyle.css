@@ -39,6 +39,8 @@ input {
 #errors {
     font-family: p1;
     color: #e50000;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .choiceButton {

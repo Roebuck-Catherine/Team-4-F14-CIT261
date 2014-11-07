@@ -8,7 +8,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
  }
 ?>
 <!DOCTYPE html>
-<html>
+<html manifest="/library/manifest.appcache">
     <head>
         <meta charset="UTF-8">
         <title>Join Existing Event</title>

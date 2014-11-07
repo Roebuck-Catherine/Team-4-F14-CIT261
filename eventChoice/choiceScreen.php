@@ -11,7 +11,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
 
 ?>
 <!DOCTYPE html>
-<html>
+<html manifest="/library/manifest.appcache">
     <head>
         <meta charset="UTF-8">
         <title>Choose Event Type</title>
@@ -25,7 +25,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
             </div>
             <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
             <main>
-                <div id="errors"><?php echo $errors?></div>
+                <div id="errors"><?php echo $errors?><?php echo $_SESSION['errors']?></div>
                 <button onclick="document.location='createEvent.php'" class="choiceButton">Create New Event</button>
                 <button onclick="document.location='#openJoin'" class="choiceButton">Join Existing Event</button>
                 
@@ -40,5 +40,8 @@ if (!$_SESSION['is_logged_in'] == 1 ){
             </main>
         </div>
     </body>
-    <?php unset($_SESSION['message']);?>
+    <?php 
+    unset($_SESSION['message']);
+    unset($_SESSION['errors']);
+    ?>
 </html>

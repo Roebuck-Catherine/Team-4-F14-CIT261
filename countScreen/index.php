@@ -9,6 +9,7 @@ if (isset($_SESSION['eventId']) && isset($_SESSION['eventName'])){
     exit;
 }
 else {
+    $_SESSION['errors'] = 'You must join an event BEFORE you can start counting...';
     header('Location: /eventChoice');
     exit;
 }
