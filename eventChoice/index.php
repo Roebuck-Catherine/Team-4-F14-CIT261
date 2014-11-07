@@ -43,14 +43,22 @@ if ($_POST['action']== 'Create Event') {
         exit;
     }
 }
+
+if ($_GET['action'] == joinEvent){
+    $_SESSION['eventId'] = verifyInt($_GET['eventId']);
+    $_SESSION['eventName'] = verifyString($_GET['eventName']);
+    header('Location: /countScreen');
+    exit;
+}
+
 else {
     //gets only events that are for the organization and events that are not of a past date.
     $events = getEvents($_SESSION['orgId']);
-    
+
     $output = "<div id='eventChoice'><ul id='eventList'>";
         foreach ($events as $event){
             $currdate = date('m/d/Y', strtotime($event[2]));
-            $output .= "<li><a href='$event[0]'>$event[1] $currdate</a></li>";
+            $output .= "<li><a href='/eventChoice/?action=joinEvent&eventId=$event[0]&eventName=$event[1]'>$event[1] $currdate</a></li>";
         }
     $output .="</ul></div>";
 
