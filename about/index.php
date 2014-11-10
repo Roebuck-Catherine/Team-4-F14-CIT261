@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>About Tally</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>
@@ -19,6 +19,7 @@
                 <p class="fineprint">More information coming soon...</p>
             </main>
         </div>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
     </body>
     <?php unset($_SESSION['message']);?>
 </html>

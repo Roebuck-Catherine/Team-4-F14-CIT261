@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Tally, The new way to count</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>
@@ -46,6 +46,7 @@
                 <p class="fineprint">Already have an account?  Sign in <a href="/index.php">HERE</a></p>
             </main>
         </div>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
     </body>
     <?php unset($_SESSION['message']);?>
 </html>

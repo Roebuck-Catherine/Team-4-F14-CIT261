@@ -1,16 +1,16 @@
 
-function countAlter(value){
-    var type = value;
-            var currentCount = document.getElementById('personalCount').innerHTML;
-            var countInterval = 1;
-
-            if (type === 'subtract'){
-                currentCount -= 1;
-            }
-            if (type === 'add'){
-                currentCount++;
-            }
-            document.getElementById('personalCount').innerHTML = currentCount;
+function countSubmit(value){
+//    var type = value;
+//            var currentCount = document.getElementById('personalCount').innerHTML;
+//            var countInterval = 1;
+//
+//            if (type === 'subtract'){
+//                currentCount -= 1;
+//            }
+//            if (type === 'add'){
+//                currentCount++;
+//            }
+//            document.getElementById('personalCount').innerHTML = currentCount;
 //    $.ajax({
 //        type: "POST",
 //        url: "/updatePersonalCount.php",

@@ -15,7 +15,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
     <head>
         <meta charset="UTF-8">
         <title>Choose Event Type</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>
@@ -39,6 +39,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                     </div>
             </main>
         </div>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
     </body>
     <?php 
     unset($_SESSION['message']);

@@ -12,7 +12,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
     <head>
         <meta charset="UTF-8">
         <title>Join Existing Event</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>
@@ -30,6 +30,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                
             </main>
         </div>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
     </body>
     <?php unset($_SESSION['message']);?>
 </html>

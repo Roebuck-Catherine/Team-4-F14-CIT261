@@ -3,7 +3,8 @@ if(!$_SESSION){
    session_start();
 }
 if (!$_SESSION['is_logged_in'] == 1 ){
-     exit;
+    header("Location: /");
+    exit;
  }
 
 ?>
@@ -12,20 +13,10 @@ if (!$_SESSION['is_logged_in'] == 1 ){
     <head>
         <meta charset="UTF-8">
         <title>Tally, The new way to count</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="style.css">
-        
-        <!--Odometer Stuff-->
-        <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-car.css" />
-        <script src="http://github.hubspot.com/odometer/odometer.js"></script>
-
-        <style>
-        .odometer {
-            font-size: 100px;
-        }
-        </style>
     </head>
-    <body>
+    <body ng-app="">
         <div>
         <div id='header'>
                Counting For: <?php echo $_SESSION['eventName']?>
@@ -34,12 +25,14 @@ if (!$_SESSION['is_logged_in'] == 1 ){
             <div class="count">
                 <div id="errors"><?php echo $errors?></div>
                 <h2 class="count">Your Count</h2>
-                <div id="personalCount"></div>
+                <div id="personalCount">{{personalCount}}</div>
                 <h2 class="count">Total</h2>
-                <div id="totalCount"></div>
+                <div id="totalCount">{{personalCount}}</div>
             </div>
-            <button id="minus" onclick="countAlter('subtract')">-</button>
-            <button id="plus" onclick="countAlter('add')">+</button>
+            <button id="minus" ng-click="personalCount=personalCount-1">-</button>
+            <button id="plus" ng-click="personalCount=personalCount+1">+</button>
         </div> 
+        <script type="text/javascript" src="/library/angular.min.js"></script>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
     </body>
 </html>

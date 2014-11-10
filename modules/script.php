@@ -1,36 +1,20 @@
-<!-- move CSS to top and JS to bottom -->
-
-<link href="/style.css?<?php echo time();?>" rel="stylesheet" type="text/css" />
-
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-<meta name="apple-mobile-web-app-capable" content="yes" />
-
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link rel="apple-touch-icon" href="/images/mobileIcon.png"/>
-
-<link rel="apple-touch-startup-image" href="/images/startUpImage.png" />
-
-
-<!--jQuery Slider Menu-->
-<link type="text/css" rel="stylesheet" href="/jquery/src/css/jquery.mmenu.css" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript" src="/jquery/src/js/jquery.mmenu.js"></script>
-
-<script type="text/javascript">
-        $(function() {
-                $('nav#menu').mmenu();
-        });
-</script>
-
-
-<!-- Count Functions-->
+<!-- Count Screen Functions-->
 <script type='text/javascript' src='/countScreen/countAlter.js'></script>
 
 
+<!-- make functions faster for mobile (Removes 300ms delay on clicks)-->
+<script type='application/javascript' src='/library/fastClick.js'></script>
+    <script>
+    window.addEventListener('load', function() {
+        FastClick.attach(document.body);
+    }, false);
+    var attachFastClick = Origami.fastclick;
+    attachFastClick(document.body);
+    </script>
+    
+
+<!--Script to make links re-direct in web-app mode instead of opening in separate browswer page-->
 <script>
-// Listen for ALL links at the top level of the document. For
-// testing purposes, we're not going to worry about LOCAL vs.
-// EXTERNAL links - we'll just demonstrate the feature.
 $( document ).on(
     "click",
     "a",

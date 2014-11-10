@@ -8,7 +8,7 @@ if(!$_SESSION){
     <head>
         <meta charset="UTF-8">
         <title>Tally, The new way to count</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>
@@ -38,6 +38,7 @@ if(!$_SESSION){
                 <p class="fineprint">Don't have an account?  Create one <a href="/accounts/createAccount.php">HERE</a></p>
             </main>
         </div>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
     </body>
     <?php unset($_SESSION['message']);?>
 </html>

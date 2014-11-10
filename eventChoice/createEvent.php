@@ -13,7 +13,7 @@ if (!$_SESSION['is_logged_in'] == 1 ) {
     <head>
         <meta charset="UTF-8">
         <title>Create Event</title>
-        <?php require $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>
@@ -41,6 +41,7 @@ if (!$_SESSION['is_logged_in'] == 1 ) {
                 </form>
             </main>
         </div>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
     </body>
     <?php unset($_SESSION['message']);?>
 </html>
