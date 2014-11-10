@@ -27,7 +27,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                 <h2 class="count">Your Count</h2>
                 <div id="personalCount">{{personalCount}}</div>
                 <h2 class="count">Total</h2>
-                <div id="totalCount">{{personalCount}}</div>
+                <div id="totalCount"></div>
             </div>
             <button id="minus" ng-click="personalCount=personalCount-1">-</button>
             <button id="plus" ng-click="personalCount=personalCount+1">+</button>
