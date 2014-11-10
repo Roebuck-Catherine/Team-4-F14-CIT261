@@ -302,7 +302,37 @@ ul, menu, dir {
 #eventList li{
     border-bottom: 1px solid black;
 }
-
+#button {
+   border-top: 1px solid #057345;
+   background: #109148;
+   background: -webkit-gradient(linear, left top, left bottom, from(#37e843), to(#109148));
+   background: -webkit-linear-gradient(top, #37e843, #109148);
+   background: -moz-linear-gradient(top, #37e843, #109148);
+   background: -ms-linear-gradient(top, #37e843, #109148);
+   background: -o-linear-gradient(top, #37e843, #109148);
+   padding: 10px 15px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#button:hover {
+   border-top-color: #00823b;
+   background: #00823b;
+   color: #ccc;
+   }
+#button:active {
+   border-top-color: #039600;
+   background: #039600;
+   }
 /*________________original settings below (PROPOSED CHANGES ABOVE)____________________*/
 
 /*.modalDialog > div {
