@@ -27,7 +27,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                 <h2 class="count">Your Count</h2>
                 <div id="personalCount"></div>
                 <h2 class="count">Total</h2>
-                <div id="totalCount"></div>
+                <div id="totalCount"><?php echo $totalCount;?></div>
             </div>
             <button id="minus" onClick="countAlter('subtract')">-</button>
             <button id="plus" onClick="countAlter('add')">+</button>
