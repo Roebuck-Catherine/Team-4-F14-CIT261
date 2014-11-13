@@ -1,7 +1,6 @@
 <!-- Count Screen Functions-->
 <script type='text/javascript' src='/countScreen/countAlter.js'></script>
 
-
 <!-- make functions faster for mobile (Removes 300ms delay on clicks)-->
 <script type='application/javascript' src='/library/fastClick.js'></script>
     <script>

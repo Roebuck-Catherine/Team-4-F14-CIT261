@@ -16,7 +16,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body ng-app="">
+    <body>
         <div>
         <div id='header'>
                Counting For: <?php echo $_SESSION['eventName']?>
@@ -25,12 +25,12 @@ if (!$_SESSION['is_logged_in'] == 1 ){
             <div class="count">
                 <div id="errors"><?php echo $errors?></div>
                 <h2 class="count">Your Count</h2>
-                <div id="personalCount">{{personalCount}}</div>
+                <div id="personalCount"></div>
                 <h2 class="count">Total</h2>
                 <div id="totalCount"></div>
             </div>
-            <button id="minus" ng-click="personalCount=personalCount-1">-</button>
-            <button id="plus" ng-click="personalCount=personalCount+1">+</button>
+            <button id="minus" onClick="countAlter('subtract')">-</button>
+            <button id="plus" onClick="countAlter('add')">+</button>
         </div> 
         <script type="text/javascript" src="/library/angular.min.js"></script>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>

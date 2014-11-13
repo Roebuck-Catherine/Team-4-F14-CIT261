@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>About Tally</title>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/library/functions.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
     </head>
     <body>

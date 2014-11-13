@@ -54,5 +54,8 @@ function verifyInt($int){
 }
 
 
+
 //global variables
+
+//error style for forms (Border Color)
 $errorStyle = 'border: 2px solid #e50000';

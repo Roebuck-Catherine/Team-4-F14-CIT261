@@ -24,7 +24,7 @@
 </nav>
 <div id='openInterval' class='modalDialog'>
     <div>
-        <a href ='#close' title='Close' class='close'>Cancel</a>
+        <a href ='#close' id="menuClose" title='Close' class='close'>Cancel</a>
         <h2>Change Interval</h2>
         <p>Count by </p>
         <button type='button' id='button'>2X: 2, 4, 6, 8</button><br><br>
