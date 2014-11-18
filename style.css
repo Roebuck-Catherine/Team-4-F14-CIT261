@@ -302,7 +302,7 @@ ul, menu, dir {
 #eventList li{
     border-bottom: 1px solid black;
 }
-#button {
+.button {
    border-top: 1px solid #057345;
    background: #109148;
    background: -webkit-gradient(linear, left top, left bottom, from(#37e843), to(#109148));
@@ -311,6 +311,7 @@ ul, menu, dir {
    background: -ms-linear-gradient(top, #37e843, #109148);
    background: -o-linear-gradient(top, #37e843, #109148);
    padding: 10px 15px;
+   margin: 10px;
    -webkit-border-radius: 8px;
    -moz-border-radius: 8px;
    border-radius: 8px;
@@ -324,12 +325,12 @@ ul, menu, dir {
    text-decoration: none;
    vertical-align: middle;
    }
-#button:hover {
+.button:hover {
    border-top-color: #00823b;
    background: #00823b;
    color: #ccc;
    }
-#button:active {
+.button:active {
    border-top-color: #039600;
    background: #039600;
    }

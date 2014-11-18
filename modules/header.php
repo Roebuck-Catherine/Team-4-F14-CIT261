@@ -19,17 +19,18 @@
             <li class="Spacer"></li>
             <li style="line-height: 30px" class="Label">Don't Have an Account?</li>
             <li><a href="../accounts/createAccount.php"><img class="menuImg" src="/images/count.png" alt="Create Account Image"/>Create an Account</a></li>
-        <?php } ?>    
+        <?php } ?>
     </ul>
 </nav>
+
 <div id='openInterval' class='modalDialog'>
     <div>
         <a href ='#close' id="menuClose" title='Close' class='close'>Cancel</a>
         <h2>Change Interval</h2>
-        <p>Count by </p>
-        <button type='button' id='button'>2X: 2, 4, 6, 8</button><br><br>
-        <button type='button' id='button'>3X: 3, 6, 9, 12</button><br><br>
-        <button type='button' id='button'>5X: 5, 10, 15, 20</button>
+        <button class='button' onClick="countAlter('1Xint')">Count by 1</button>
+        <button class='button' onClick="countAlter('2Xint')">Count by 2</button>
+        <button class='button' onClick="countAlter('3Xint')">Count by 3</button>
+        <button class='button' onClick="countAlter('5Xint')">Count by 5</button>
     </div>
 </div>
 <div id='openReset' class='modalDialog'>
@@ -37,7 +38,7 @@
         <a href ='#close' title='Close' class='close'>Cancel</a>
         <h2>Reset Count</h2>
         <p>Are you sure you want to reset count to zero? </p>
-        <button type='button' id='button'> Yes </button><button type='button' id='button' style="float: right"> No </button>
-        
+        <button class='button' onClick="countAlter('resetToZero')">Reset count to Zero</button>
     </div>
 </div>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
