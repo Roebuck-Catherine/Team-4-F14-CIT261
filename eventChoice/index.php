@@ -62,6 +62,7 @@ else {
         }
     $output .="</ul></div>";
 
-    include 'choiceScreen.php'; 
+    include 'choiceScreen.php';
+    
 }
    

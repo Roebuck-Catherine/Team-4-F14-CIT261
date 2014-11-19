@@ -41,7 +41,7 @@ if($_POST['action']=='Login'){
         $_SESSION['is_logged_in'] = 1;
         $_SESSION['username'] = $username;
         $_SESSION['orgId'] = getOrgId($orgName);
-        header('Location: /eventChoice');
+        header('Location:/eventChoice');
         exit;
     }
     

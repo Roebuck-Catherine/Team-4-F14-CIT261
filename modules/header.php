@@ -1,4 +1,4 @@
-<div id="menuButtonStyle">Menu</div>
+<div id="menuButtonStyle"></div>
 <div id="menuButton"><a href="#menu"></a></div> 
 
 <!-- Navigation -->
@@ -26,11 +26,11 @@
 <div id='openInterval' class='modalDialog'>
     <div>
         <a href ='#close' id="menuClose" title='Close' class='close'>Cancel</a>
-        <h2>Change Interval</h2>
-        <button class='button' onClick="countAlter('1Xint')">Count by 1</button>
-        <button class='button' onClick="countAlter('2Xint')">Count by 2</button>
-        <button class='button' onClick="countAlter('3Xint')">Count by 3</button>
-        <button class='button' onClick="countAlter('5Xint')">Count by 5</button>
+        <h2>Interval</h2>
+        <button class='button' onClick="changeInterval(1)">Count by 1</button>
+        <button class='button' onClick="changeInterval(2)">Count by 2</button>
+        <button class='button' onClick="changeInterval(3)">Count by 3</button>
+        <button class='button' onClick="changeInterval(5)">Count by 5</button>
     </div>
 </div>
 <div id='openReset' class='modalDialog'>
@@ -38,7 +38,7 @@
         <a href ='#close' title='Close' class='close'>Cancel</a>
         <h2>Reset Count</h2>
         <p>Are you sure you want to reset count to zero? </p>
-        <button class='button' onClick="countAlter('resetToZero')">Reset count to Zero</button>
+        <button class='button' onClick="resetCount()">Reset count to Zero</button>
     </div>
 </div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>

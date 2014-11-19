@@ -12,7 +12,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
 <html manifest="/library/manifest.appcache">
     <head>
         <meta charset="UTF-8">
-        <title>Tally, The new way to count</title>
+        <title>Tally</title>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
