@@ -88,7 +88,8 @@ h2 {
 
 /*Counter Screen Styling*/
 div.count{
-    min-height: 315px;
+    min-height: -moz-calc(100% - 115px);
+    margin-bottom: 115px;
 }
 
 h2.count {
@@ -113,7 +114,7 @@ h2.count {
     background: -moz-linear-gradient(#BFBFBF, #58A831); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#BFBFBF, #58A831); /* Standard syntax */
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 #totalCount {
@@ -131,19 +132,27 @@ h2.count {
     background: -moz-linear-gradient(#BFBFBF, #798075); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#BFBFBF, #798075); /* Standard syntax */
     position: relative;
-    z-index: -1;
+    z-index: 0;
+}
+
+#countButtons {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    z-index: 0;
 }
 
 #minus {
-    position: fixed;
-        bottom: 0px;
-        left: 0px;
-    z-index: -1;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 2;
     float:left;
-    color: #940000;
+    color: #ffffff;
     font-size:300%;
+    font-weight: bold;
     text-align: center;
-    margin-top:20px;
+    padding-bottom: 40px;
     width:50%;
     max-width: 50%;
     height:115px;
@@ -164,16 +173,16 @@ h2.count {
 }
 
 #plus {
-    position: fixed;
-        bottom: 0px;
+    position: absolute;
         right: 0px;
-    z-index: -1;
+        bottom:0px;
+    z-index: 2;
     float:right;
-    color: #038703;
+    color: #ffffff;
     font-size:300%;
     font-weight: bold;
     text-align: center;
-    margin-top:20px;
+    padding-top: 10px;
     width:50%;
     max-width: 50%;
     height:115px;

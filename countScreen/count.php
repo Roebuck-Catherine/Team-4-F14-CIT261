@@ -29,8 +29,10 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                 <h2 class="count">Total</h2>
                 <div id="totalCount"><?php echo $totalCount;?></div>
             </div>
-            <button id="minus" onClick="countAlter('subtract')">-</button>
+            <div id="countButtons">
+            <button id="minus" onClick="countAlter('subtract')">_</button>
             <button id="plus" onClick="countAlter('add')">+</button>
+            </div>
         </div> 
         <script type="text/javascript" src="/library/angular.min.js"></script>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
