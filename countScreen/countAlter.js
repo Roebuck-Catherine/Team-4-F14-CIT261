@@ -37,9 +37,13 @@ xmlhttp.send();
 
 }
 
+function updateButtonOnLoad(){
+    document.getElementById('plus').innerHTML = "+" + localStorage.countInterval;
+}
 
 function changeInterval(value){
     localStorage.countInterval = value;
+    document.getElementById('plus').innerHTML = "+" + value;
     
     var page = window.location.href;
     page = page + '/#close';

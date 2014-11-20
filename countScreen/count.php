@@ -16,7 +16,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body onload="countAlter()">
+    <body onload="countAlter(); updateButtonOnLoad();">
         <div>
         <div id='header'>
                Counting For: <?php echo $_SESSION['eventName']?>
