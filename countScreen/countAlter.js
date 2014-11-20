@@ -3,11 +3,26 @@ var countInterval = 1;
 function countAlter(value){
             var currentCount = document.getElementById('personalCount').innerHTML;
             if (value === 'subtract'){
-                currentCount -= 1;
+                currentCount = currentCount - countInterval;
             }
             if (value === 'add'){
-                currentCount = +currentCount + +countInterval;
+                currentCount = currentCount + countInterval;
             }
+
+function updateDatabase() {
+	var xmlhttp = new XMLHttpRequest(); //setup AJAX object
+
+	var jsonSend = JSON.stringify({name: username, count: currentCount}); 
+	//setup the current user and count as an object and convert to JSON format: 
+
+	xmlhttp.onreadystatechange = 
+	//tell it what to do when it gets stuff back
+	
+	xmlhttp.open("GET", "updatePersonalCount.php", true);
+	xmlhttp.send();
+
+
+}
 
 // MOVED THIS CODE TO DIFFERENT FUNCTION BELOW TO REDUCE REDUNDANT CODE EXECUTION FOR AJAX CALL
 //            if (value === 'resetToZero'){
