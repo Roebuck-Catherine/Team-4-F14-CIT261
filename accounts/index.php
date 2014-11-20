@@ -11,6 +11,7 @@ if($_POST['action']=='Login'){
     $username = verifyString($_POST['username']);
     $orgName = verifyString($_POST['orgName']);
     $orgPswd = addslashes($_POST['orgPswd']);
+    $staySignedIn = $_POST['StaySignedIn'];
     
     //Form Pre-Submit Validation
     if (empty($username)){
@@ -31,6 +32,11 @@ if($_POST['action']=='Login'){
     if (isset($errors)){
         include '../index.php';
         exit;
+    }
+    
+    if($staySignedIn == 'checked'){
+        
+        
     }
     
     $serverPass = getServerPass($orgName);

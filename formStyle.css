@@ -36,6 +36,10 @@ input {
     width: 100%;
 }
 
+input[type=submit] {
+    -webkit-border-radius:2px;
+}
+
 #errors {
     font-family: p1;
     color: #e50000;
@@ -65,4 +69,15 @@ input {
     font-size: 8pt;
     color: #00cc00;
     vertical-align:top;
+}
+
+#staySignedInText {
+    font-size: 10pt;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+#staySignedIn {
+    float: right;
 }
