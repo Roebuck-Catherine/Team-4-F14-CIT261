@@ -4,37 +4,18 @@ localStorage.setItem("personalCount", 0);
 function countAlter(value){
             var currentCount = localStorage.getItem("personalCount");
             if (value === 'subtract'){
-                currentCount = currentCount - localStorage.countInterval;
+                currentCount -= 1;
             }
             if (value === 'add'){
-                currentCount = currentCount + localStorage.countInterval;
+                currentCount = +currentCount + +localStorage.countInterval;
             }
 
         //Update Local Storage Count
         localStorage.personalCount = currentCount;
-                currentCount = +currentCount + +countInterval;
 
         //Get Local Storage Value to update count on screen
         document.getElementById('personalCount').innerHTML = localStorage.getItem("personalCount");
         
-//THIS IS WHERE CODE WILL BE TO UPDATE THE DATABASE WHEN BUTTONS ARE PRESSED
-//    $.ajax({
-//        type: "POST",
-//        url: "/updatePersonalCount.php",
-//        data: id,
-//        success: function(){
-//            
-//        },
-//        error: function(){
-//            var el = document.createElement("div");
-//            el.setAttribute("style",style);
-//            el.innerHTML = 'ERROR UPDATING! TRY AGAIN...';
-//            setTimeout(function(){
-//             el.parentNode.removeChild(el);
-//            },4000);
-//            document.body.appendChild(el);
-//        }
-//    });
 }
 
 function updateDatabase () {
@@ -51,13 +32,10 @@ xmlhttp.onreadystatechange = function() {
     }
 
 
-xmlhttp.open(“GET”,”updatePersonalCount.php?send=”+jsonSend, true);
+//xmlhttp.open(“GET”,”updatePersonalCount.php?send=”+jsonSend, true);
 xmlhttp.send();
 
 }
-
-
-
 
 
 function changeInterval(value){
