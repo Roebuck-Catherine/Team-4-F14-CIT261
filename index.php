@@ -30,9 +30,14 @@ if(!$_SESSION){
 
                     <label for='orgPswd'>Organization Password<span class="required">*</span></label>
                     <input class="field" type='password' placeholder="Get From Admin" style='<?php echo $orgPswdError ?>' name='orgPswd' id='orgPswd' value='<?php echo $orgPswd?>'>
-
+                    
                     <label for="action">&nbsp;</label>
                     <input type="submit" name="action" id="action" value="Login"/>
+                    
+                     <label for="signedIn" id="staySignedInText">Keep me signed in&nbsp;
+                        <input type="checkbox" name="staySingedIn" id="staySignedIn"/>
+                        </label>
+                    
                 </form>
 
                 <p class="fineprint">Don't have an account?  Create one <a href="/accounts/createAccount.php">HERE</a></p>

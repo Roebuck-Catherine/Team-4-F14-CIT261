@@ -1,32 +1,20 @@
-var countInterval = 1;
+localStorage.setItem("countInterval");
+localStorage.setItem("personalCount", 0);
 
 function countAlter(value){
-            var currentCount = document.getElementById('personalCount').innerHTML;
+            var currentCount = localStorage.getItem("personalCount");
             if (value === 'subtract'){
                 currentCount -= 1;
             }
             if (value === 'add'){
-                currentCount = +currentCount + +countInterval;
+                currentCount = +currentCount + +localStorage.countInterval;
             }
 
-// MOVED THIS CODE TO DIFFERENT FUNCTION BELOW TO REDUCE REDUNDANT CODE EXECUTION FOR AJAX CALL
-//            if (value === 'resetToZero'){
-//                currentCount = 0;
-//            }
-//            if (value === '1Xint'){
-//                countInterval = 1;
-//            }
-//            if (value === '2Xint'){
-//                countInterval = 2;
-//            }
-//            if (value === '3Xint'){
-//                countInterval = 3;
-//            }
-//            if (value === '5Xint'){
-//                countInterval = 5;
-//            }
+        //Update Local Storage Count
+        localStorage.personalCount = currentCount;
         
-        document.getElementById('personalCount').innerHTML = currentCount;
+        //Get Local Storage Value to update count on screen
+        document.getElementById('personalCount').innerHTML = localStorage.getItem("personalCount");
         
 //THIS IS WHERE CODE WILL BE TO UPDATE THE DATABASE WHEN BUTTONS ARE PRESSED
 //    $.ajax({
@@ -49,7 +37,7 @@ function countAlter(value){
 }
 
 function changeInterval(value){
-    countInterval = value;
+    localStorage.countInterval = value;
     
     var page = window.location.href;
     page = page + '/#close';
@@ -57,6 +45,7 @@ function changeInterval(value){
 }
 
 function resetCount(){
+    localStorage.personalCount = 0;
     document.getElementById('personalCount').innerHTML = 0;
     
     var page = window.location.href;

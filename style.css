@@ -61,7 +61,7 @@ p {
 }
 
 .fineprint {
-    clear: left;
+    clear: both;
     display: block;
     font-size: 10pt;
     text-align: center;
