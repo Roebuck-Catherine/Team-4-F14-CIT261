@@ -1,5 +1,7 @@
 localStorage.setItem("countInterval");
+localStorage.countInterval = 1;
 localStorage.setItem("personalCount", 0);
+localStorage.personalCount = 0;
 
 function countAlter(value){
             var currentCount = localStorage.getItem("personalCount");
@@ -37,7 +39,7 @@ xmlhttp.send();
 
 }
 
-function updateButtonOnLoad(){
+function updateOnLoad(){
     document.getElementById('plus').innerHTML = "+" + localStorage.countInterval;
 }
 

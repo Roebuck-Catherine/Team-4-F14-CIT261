@@ -16,7 +16,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body onload="countAlter(); updateButtonOnLoad();">
+    <body onload="countAlter(); updateOnLoad();">
         <div>
         <div id='header'>
                Counting For: <?php echo $_SESSION['eventName']?>
@@ -25,7 +25,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
             <div class="count">
                 <div id="errors"><?php echo $errors?></div>
                 <h2 class="count">Your Count</h2>
-                <div id="personalCount"></div>
+                <div id="personalCount">0</div>
                 <h2 class="count">Total</h2>
                 <div id="totalCount"><?php echo $totalCount;?></div>
             </div>
