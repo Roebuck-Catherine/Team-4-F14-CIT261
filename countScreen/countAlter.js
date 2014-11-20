@@ -7,11 +7,33 @@ function countAlter(value){
                 currentCount -= 1;
             }
             if (value === 'add'){
+<<<<<<< HEAD
                 currentCount = +currentCount + +localStorage.countInterval;
             }
 
         //Update Local Storage Count
         localStorage.personalCount = currentCount;
+=======
+                currentCount = +currentCount + +countInterval;
+            }
+
+// MOVED THIS CODE TO DIFFERENT FUNCTION BELOW TO REDUCE REDUNDANT CODE EXECUTION FOR AJAX CALL
+//            if (value === 'resetToZero'){
+//                currentCount = 0;
+//            }
+//            if (value === '1Xint'){
+//                countInterval = 1;
+//            }
+//            if (value === '2Xint'){
+//                countInterval = 2;
+//            }
+//            if (value === '3Xint'){
+//                countInterval = 3;
+//            }
+//            if (value === '5Xint'){
+//                countInterval = 5;
+//            }
+>>>>>>> parent of 45b95a6... Attempting AJAX
         
         //Get Local Storage Value to update count on screen
         document.getElementById('personalCount').innerHTML = localStorage.getItem("personalCount");
