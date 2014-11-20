@@ -14,4 +14,5 @@ date_default_timezone_set("America/Los_Angeles");
 require $_SERVER['DOCUMENT_ROOT'].'/countScreen/model.php';
 
 //$result = updateCount();
+echo total;
 return true;
