@@ -10,7 +10,7 @@
             <li><a href="/eventChoice"><img class="menuImg" src="/images/calendar.png" alt="Calendar Image"/>Event Choice Menu</a></li>
             <li><a href="#openReset"><img class="menuImg" src="/images/undo.png" alt="Reset Image"/>Reset Count to Zero</a></li>
             <li><a href="#openInterval"><img class="menuImg" src="/images/interval.png" alt="Interval Image"/>Change Count Interval</a></li>
-            <li><a href="/"><img class="menuImg" src="/images/submit.png" alt="Submit Image"/>Submit Final Count</a></li>
+            <li><a href="#openSubmitFinal"><img class="menuImg" src="/images/submit.png" alt="Submit Image"/>Submit Final Count</a></li>
             <li class="Spacer"></li>
             <li><a href="/accounts/?action=logout"><img class="menuImg" src="/images/White Lock.png" alt="Logout Image"/>Logout of Organization</a></li>
         <?php } else{ ?>
@@ -40,5 +40,12 @@
         <p>Are you sure you want to reset count to zero? </p>
         <button class='button' onClick="resetCount()">Reset count to Zero</button>
     </div>
+</div>
+
+<div id="openSubmitFinal" class="modalDialog">
+    <a href ='#close' title='Close' class='close'>Cancel</a>
+    <h2>Submit Final Count</h2>
+    <p>Finished counting Event</p>
+    <button class="button" onClick="" style="margin:auto;">Submit Count</button>
 </div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
