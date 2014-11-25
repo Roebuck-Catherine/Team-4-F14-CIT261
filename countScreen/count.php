@@ -30,7 +30,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                 <div id="totalCount"><?php echo $totalCount;?></div>
             </div>
             <div id="countButtons">
-            <button id="minus" onClick="countAlter('subtract')">_</button>
+            <button id="minus" onClick="countAlter('subtract')">-1</button>
             <button id="plus" onClick="countAlter('add')">+</button>
             </div>
         </div> 
