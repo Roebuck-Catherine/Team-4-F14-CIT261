@@ -45,7 +45,6 @@
 <div id="openSubmitFinal" class="modalDialog">
     <a href ='#close' title='Close' class='close'>Cancel</a>
     <h2>Submit Final Count</h2>
-    <p>Finished counting Event</p>
-    <button class="button" onClick="" style="margin:auto;">Submit Count</button>
+    <button class="button" onClick="submitCount()">Submit Final Count</button>
 </div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
