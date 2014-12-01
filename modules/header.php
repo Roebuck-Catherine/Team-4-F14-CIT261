@@ -37,14 +37,17 @@
     <div>
         <a href ='#close' title='Close' class='close'>Cancel</a>
         <h2>Reset Count</h2>
-        <p>Are you sure you want to reset count to zero? </p>
-        <button class='button' onClick="resetCount()">Reset count to Zero</button>
+        <p class="fineprint">This cannot be undone.<br>Do you want to reset your count?</p>
+        <button class='button' onClick="resetCount()">Yes, Reset My Count to Zero</button>
     </div>
 </div>
 
 <div id="openSubmitFinal" class="modalDialog">
-    <a href ='#close' title='Close' class='close'>Cancel</a>
-    <h2>Submit Final Count</h2>
-    <button class="button" onClick="submitCount()">Submit Final Count</button>
+    <div>
+        <a href ='#close' title='Close' class='close'>Cancel</a>
+        <h2>Submit Count</h2>
+        <button class="button" onClick="submitCount()">Submit Final Count</button>
+        <p class="fineprint">Note: this will close the current count and will end your instance of this event.  Another event must be selected before counting.</p>
+    </div>
 </div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/script.php'; ?>
