@@ -25,11 +25,12 @@ function updateDatabase () {
     //set current user, count as an object, convert to JSON
 
 var jsonSend = JSON.stringify({name: username, count: currentCount})
-}
+
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState==4 && xmlhttp.status==200) {
         document.getElementById("personalCount").innerHTML=xmlhttp.responseText;
+    }
 
     }
 
