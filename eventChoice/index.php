@@ -24,6 +24,10 @@ if ($_POST['action']== 'Create Event') {
         }
 
     if (isset($errors)) {
+        $count = substr_count($errors, '<br>');
+        if($count == 3){
+            $errors = "The form cannot be left blank...<br>RED FIELDS ARE REQUIRED";
+        }
         include '/createEvent.php';
         exit;
     }

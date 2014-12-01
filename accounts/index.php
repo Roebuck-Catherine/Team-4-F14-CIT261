@@ -30,6 +30,10 @@ if($_POST['action']=='Login'){
     }
     
     if (isset($errors)){
+        $count = substr_count($errors, '<br>');
+        if($count == 3){
+            $errors = "The form cannot be left blank...<br>RED FIELDS ARE REQUIRED";
+        }
         include '../index.php';
         exit;
     }
@@ -112,6 +116,10 @@ if ($_POST['action']=='Create Account'){
     }
     
     if (isset($errors)){
+        $count = substr_count($errors, '<br>');
+        if($count == 7){
+            $errors = "The form cannot be left blank...<br>RED FIELDS ARE REQUIRED";
+        }
         include 'createAccount.php';
         exit;
     }
