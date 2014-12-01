@@ -2,6 +2,14 @@ localStorage.setItem("countInterval");
 localStorage.countInterval = 1;
 localStorage.setItem("personalCount", 0);
 localStorage.personalCount = 0;
+window.setInterval('updateLiveTotal()', 5000); // 60 seconds
+
+function updateLiveTotal() {
+    $.ajax({
+        url: "/countScreen/updateLiveTotal.php",
+    });
+}
+
 
 function countAlter(value){
             var currentCount = localStorage.getItem("personalCount");
