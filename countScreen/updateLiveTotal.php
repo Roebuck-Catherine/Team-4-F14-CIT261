@@ -11,9 +11,10 @@ if(!$_SESSION){
 date_default_timezone_set("America/Los_Angeles");
 
 
-require $_SERVER['DOCUMENT_ROOT'].'/admin/model.php';
+require $_SERVER['DOCUMENT_ROOT'].'/countScreen/model.php';
 
 
-$id = $_SESSION['eventId'];
+$eventId = $_SESSION['eventId'];
 $result = getTotalCount($eventId);
-return $result;
+
+echo json_encode(array('totalCount' => $result[0]));
