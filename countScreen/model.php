@@ -23,13 +23,17 @@ function getTotalCount($eventId){
         $_SESSION['message']='Sorry, and error occured with the database.';
     }
 }
-/*
-//I"m not sure if TotalCount is the correct name in the database table.
+
 function submitFinalCount() {
     $conn= databaseConnection();
     try{
-        $sql = "UPDATE TotalCount SET TotalCount='currentCount'";
+        $sql = "INSERT INTO counts (countValue) VALUES ('personalCount')";
         
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetch();
+        $stmt->closeCursor();
+          
     } catch (Exception $ex) {
         $message = 'Sorry, There was an error';
     }
@@ -40,4 +44,3 @@ function submitFinalCount() {
         $_SESSION['message']='Sorry, and error occured with the database.';
     }
 }
- */

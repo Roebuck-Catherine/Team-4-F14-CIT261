@@ -44,7 +44,7 @@
 
 <div id="openSubmitFinal" class="modalDialog">
     <div>
-        <a href ='#close' title='Close' class='close'>Cancel</a>
+        <a href ='#close' id="menuClose" title='Close' class='close'>Cancel</a>
         <h2>Submit Count</h2>
         <button class="button" onClick="submitCount()">Submit Final Count</button>
         <p class="fineprint">Note: this will close the current count and will end your instance of this event.  Another event must be selected before counting.</p>

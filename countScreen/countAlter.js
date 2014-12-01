@@ -107,10 +107,3 @@ function resetCount(){
     page = page + '/#close';
     window.location.assign(page);
 }
-
-//function SubmitCount(){
-//    var totalcount = currentCount;
-//    
-//    localStorage.personalCount = 0;
-//    document.getElementById('personalCount').innerHTML = 0;
-//}
