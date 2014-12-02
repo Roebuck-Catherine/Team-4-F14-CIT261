@@ -63,14 +63,14 @@ function countAlter(value){
 
         //Get Local Storage Value to update count on screen
         document.getElementById('personalCount').innerHTML = localStorage.getItem("personalCount");
-        
+        updateDatabase (currentCount);
 }
 
-function updateDatabase () {
+function updateDatabase (count) {
     var myAjax=new XMLHttpRequest(); //setup AJAX object
     //set current user, count as an object, convert to JSON
 
-var jsonSend = JSON.stringify({name: username, count: currentCount})
+//var jsonSend = JSON.stringify({name: username, count: currentCount})
 
 
 myAjax.onreadystatechange = function() {
@@ -81,7 +81,7 @@ myAjax.onreadystatechange = function() {
     }
 
 
-myAjax.open(“GET”,”updatePersonalCount.php, true);
+myAjax.open(“GET”,"updatePersonalCount.php", true);
 myAjax.send();
 
 }
