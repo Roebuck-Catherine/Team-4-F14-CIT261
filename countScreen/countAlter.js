@@ -67,22 +67,22 @@ function countAlter(value){
 }
 
 function updateDatabase () {
-    var xmlhttp=new XMLHttpRequest(); //setup AJAX object
+    var myAjax=new XMLHttpRequest(); //setup AJAX object
     //set current user, count as an object, convert to JSON
 
 var jsonSend = JSON.stringify({name: username, count: currentCount})
 
 
-xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-        document.getElementById("personalCount").innerHTML=xmlhttp.responseText;
+myAjax.onreadystatechange = function() {
+    if (myAjax.readyState==4 && myAjax.status==200) {
+        document.getElementById("personalCount").innerHTML=myAjax.responseText;
     }
 
     }
 
 
-//xmlhttp.open(“GET”,”updatePersonalCount.php?send=”+jsonSend, true);
-xmlhttp.send();
+myAjax.open(“GET”,”updatePersonalCount.php, true);
+myAjax.send();
 
 }
 
