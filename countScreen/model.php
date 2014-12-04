@@ -28,7 +28,6 @@ function submitFinalCount() {
     $conn= databaseConnection();
     try{
         $sql = "INSERT INTO counts (countValue) VALUES ('personalCount')";
-        
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $data = $stmt->fetch();
@@ -44,3 +43,24 @@ function submitFinalCount() {
         $_SESSION['message']='Sorry, and error occured with the database.';
     }
 }
+
+//In Progress
+//function updateCount($eventId, $countValue, $personCount, $countDate) {
+//    $conn= databaseConnection();
+//    try{
+//        $sql = "UPDATE counts (countValue) VALUES ('personalCount')";
+//        $stmt = $conn->prepare($sql);
+//        $stmt->execute();
+//        $data = $stmt->fetch();
+//        $stmt->closeCursor();
+//          
+//    } catch (Exception $ex) {
+//        $message = 'Sorry, There was an error';
+//    }
+//    if(is_array($data)){
+//        return $data[0];
+//    }
+//    else{
+//        $_SESSION['message']='Sorry, and error occured with the database.';
+//    }
+//}

@@ -21,7 +21,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
         <div id='header'>
                Counting For: <?php echo $_SESSION['eventName']?>
         </div>
-            <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
+            <?php require $_SERVER['DOCUMENT_ROOT'].'/modules/header.php' ?>
             <div class="count">
                 <div id="errors"><?php echo $errors?></div>
                 <h2 class="count">Your Count</h2>
