@@ -48,19 +48,20 @@ function submitFinalCount() {
 function updateCount($eventId, $countValue, $personCount, $countDate) {
     $conn= databaseConnection();
     try{
-        $sql = "UPDATE counts (eventId, countValue, personCount, countDate) VALUES (:eventId, :countValue, :personCount, :countDate)";
+        $sql = 'UPDATE counts SET countValue= :countValue, countDate= :countDate WHERE personCount= :personCount and eventId= :eventId';
 
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(':eventId', $eventId, PDO::PARAM_INT);
         $stmt->bindValue(':countValue', $countValue, PDO::PARAM_INT);
         $stmt->bindValue(':personCount', $personCount, PDO::PARAM_STR);
         $stmt->bindValue(':countDate', $countDate, PDO::PARAM_STR);
-        $result = $stmt->execute();
-        $stmt->closeCursor();       
+        $stmt->execute();
+        $rowcount = $stmt->rowCount(); //How many rows were affected
+        $stmt->closeCursor();   
     } catch (PDOException $ex) {
         
     }
-    if($result){
+    if($rowcount){
         return TRUE;
     }
     else{

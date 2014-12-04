@@ -54,12 +54,12 @@ function countAlter(value){
         //Get Local Storage Value to update count on screen
         document.getElementById('personalCount').innerHTML = localStorage.getItem("personalCount");
         
-//        try {
-//            updateDatabase(currentCount);
-//        }
-//        catch ($error){
-//            alert("Error Updating Database");
-//        } 
+        try {
+            updateDatabase(currentCount);
+        }
+        catch ($error){
+            alert("Error Updating Database");
+        } 
 }
 
 //Help From Bryce
@@ -77,28 +77,6 @@ function updateDatabase(count) {
             }
         });
 }
-
-
-//Catharine Code
-//function updateDatabase (count) {
-//    var myAjax=new XMLHttpRequest(); //setup AJAX object
-//    //set current user, count as an object, convert to JSON
-//
-////var jsonSend = JSON.stringify({name: username, count: currentCount})
-//
-//
-//myAjax.onreadystatechange = function() {
-//    if (myAjax.readyState==4 && myAjax.status==200) {
-//        document.getElementById("personalCount").innerHTML=myAjax.responseText;
-//    }
-//
-//    }
-//
-//
-////myAjax.open(“GET”,"updatePersonalCount.php", true);
-//myAjax.send();
-//
-//}
 
 function updateButtonOnLoad(){
     document.getElementById('plus').innerHTML = "+" + localStorage.countInterval;
