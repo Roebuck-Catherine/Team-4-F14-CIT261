@@ -20,7 +20,7 @@ function getTotalCount($eventId){
         return $data[0];
     }
     else{
-        $_SESSION['message']='Sorry, and error occured with the database.';
+        $_SESSION['message']='Sorry, an error occured with the database.';
     }
 }
 
