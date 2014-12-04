@@ -2,6 +2,10 @@
 if(!$_SESSION){
    session_start();
 }
+if ($_SESSION['is_logged_in'] == 1 ){
+    header("Location: /countScreen");
+    exit;
+ }
 ?>
 <!DOCTYPE html>
 <html manifest="/library/manifest.appcache">
