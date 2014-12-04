@@ -14,7 +14,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
         <meta charset="UTF-8">
         <title>Tally</title>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="/style.css">
     </head>
     <body onload="countAlter(); updateButtonOnLoad(); updateLiveTotal();">
         <div>

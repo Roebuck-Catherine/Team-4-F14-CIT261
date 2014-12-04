@@ -12,10 +12,10 @@
             <li><a href="#openInterval"><img class="menuImg" src="/images/interval.png" alt="Interval Image"/>Change Count Interval</a></li>
             <li><a href="#openSubmitFinal"><img class="menuImg" src="/images/submit.png" alt="Submit Image"/>Submit Final Count</a></li>
             <li class="Spacer"></li>
-            <li><a href="/accounts/?action=logout"><img class="menuImg" src="/images/White Lock.png" alt="Logout Image"/>Logout of Organization</a></li>
+            <li><a href="/accounts/?action=logout"><img class="menuImg" src="/images/whiteLock.png" alt="Logout Image"/>Logout of Organization</a></li>
         <?php } else{ ?>
             <li><a href="/about"><img class="menuImg" src="/images/about.png" alt="about Tally"/>Learn About Tally</a></li>
-            <li><a href="/"><img class="menuImg" src="/images/White Lock.png" alt="Logout Image"/>Account Login</a></li>
+            <li><a href="/"><img class="menuImg" src="/images/whiteLock.png" alt="Logout Image"/>Account Login</a></li>
             <li class="Spacer"></li>
             <li style="line-height: 30px" class="Label">Don't Have an Account?</li>
             <li><a href="../accounts/createAccount.php"><img class="menuImg" src="/images/count.png" alt="Create Account Image"/>Create an Account</a></li>

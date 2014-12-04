@@ -11,8 +11,7 @@
     attachFastClick(document.body);
     </script>
     
-
-<!--Script to make links re-direct in web-app mode instead of opening in separate browswer page-->
+<!--Script to make links re-direct in web-app mode instead of opening in separate browser page-->
 <script>
 $( document ).on(
     "click",

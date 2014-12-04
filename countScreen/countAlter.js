@@ -1,8 +1,14 @@
-localStorage.setItem("countInterval");
-localStorage.countInterval = 1;
-localStorage.setItem("personalCount", 0);
-localStorage.personalCount = 0;
-
+$(document).ready(function(){
+    if (localStorage.getItem("countInterval") === null) {
+        localStorage.setItem("countInterval", 1);
+    }
+    if (localStorage.getItem("personalCount") === null) {
+        localStorage.setItem("personalCount", 0);
+    }
+    window.setInterval(function(){
+       updateLiveTotal();
+    }, 5000);
+ });
 
 function updateLiveTotal(){
     var success ="font-size: 45px;\n\
@@ -20,15 +26,16 @@ function updateLiveTotal(){
             success: function(html){
                 document.getElementById('totalCount').setAttribute("style",success);
                 var total = html.totalCount;
+                if (total <= 0){
+                    var total = 0;
+                }
                 document.getElementById('totalCount').innerHTML = total;
             },
             error: function(){
-            document.getElementById('totalCount').setAttribute("style",error);
-            document.getElementById('totalCount').innerHTML = 'Trying Again...';
-            document.body.appendChild(el);
+                document.getElementById('totalCount').setAttribute("style",error);
+                document.getElementById('totalCount').innerHTML = 'Trying Again...';
             }
         });
-    self.setInterval(updateLiveTotal,5000);
 }
 
 
@@ -46,7 +53,8 @@ function countAlter(value){
 
         //Get Local Storage Value to update count on screen
         document.getElementById('personalCount').innerHTML = localStorage.getItem("personalCount");
-//      updateDatabase (currentCount);
+        
+//      updateDatabase(currentCount);
 }
 
 //Help From Bryce

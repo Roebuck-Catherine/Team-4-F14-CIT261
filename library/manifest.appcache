@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# updated 11/20/2014 V1.3
+# updated 12/4/2014 V1.8
 /style.css
 /formStyle.css
 /index.php
@@ -12,7 +12,7 @@ CACHE MANIFEST
 /eventChoice/createEvent.php
 /eventChoice/index.php
 /eventChoice/model.php
-/images/White Lock.png
+/images/whiteLock.png
 /images/about.png
 /images/calendar.png
 /images/count.png
