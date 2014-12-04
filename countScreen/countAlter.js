@@ -54,25 +54,29 @@ function countAlter(value){
         //Get Local Storage Value to update count on screen
         document.getElementById('personalCount').innerHTML = localStorage.getItem("personalCount");
         
-//      updateDatabase(currentCount);
+//        try {
+//            updateDatabase(currentCount);
+//        }
+//        catch ($error){
+//            alert("Error Updating Database");
+//        } 
 }
 
 //Help From Bryce
-//function updateDatabase(count) {
-//    $.ajax({
-//            method: "POST",
-//            url: "/countScreen/updatePersonalCount.php",
-//            dataType: "json",
-//            data: {"personalCount":count},
-//            cache: false,
-//            success: function(){
-//                alert("It Worked");
-//            },
-//            error: function(){
-//              alert("There was an error");
-//            }
-//        });
-//}
+function updateDatabase(count) {
+    $.ajax({
+            method: "POST",
+            url: "/countScreen/updatePersonalCount.php",
+            data: "personalCount=" + count,
+            cache: false,
+            success: function(){
+                alert("It Worked");
+            },
+            error: function(){
+              alert("There was an error");
+            }
+        });
+}
 
 
 //Catharine Code

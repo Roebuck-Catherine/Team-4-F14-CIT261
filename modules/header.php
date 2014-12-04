@@ -47,7 +47,7 @@
     <div>
         <a href ='#close' id="menuClose" title='Close' class='close'>Cancel</a>
         <h2>Submit Count</h2>
-        <button class="button" onClick="submitCount()">Submit Final Count</button>
+        <button class="button" onClick="submitFinalCount()">Submit Final Count</button>
         <p class="fineprint">Note: this will close the current count and will end your instance of this event.  Another event must be selected before counting.</p>
     </div>
 </div>
