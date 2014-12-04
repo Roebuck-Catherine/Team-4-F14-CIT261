@@ -17,4 +17,6 @@ require $_SERVER['DOCUMENT_ROOT'].'/countScreen/model.php';
 $eventId = $_SESSION['eventId'];
 $result = getTotalCount($eventId);
 
-echo json_encode(array('totalCount' => $result[0]));
+echo json_encode(array('totalCount' => $result));
+
+
