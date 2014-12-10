@@ -93,6 +93,27 @@ function getUsers($org_id){
     }
 }
 
+function getUserName($user_id){
+    $conn = databaseConnection();
+    try{
+        $sql = 'SELECT user_name FROM users WHERE user_id = :userid';
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(':userid', $user_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $data = $stmt->fetch();
+        $stmt->closeCursor();
+            
+    } catch (PDOException $ex) {
+        echo 'database error';
+    }
+    if(is_array($data)){
+        return $data;
+    }
+    else{
+        return FALSE;
+    }
+}
+
 function getUserPswd($user_id){
     $conn = databaseConnection();
     try{

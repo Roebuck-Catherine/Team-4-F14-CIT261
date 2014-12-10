@@ -169,6 +169,8 @@ if($_POST['action']== 'Proceed'){
     
     if($validPswd){
         $_SESSION['user_id'] = $user_id;
+        $userName = getUserName($user_id);
+        $_SESSION['user_name'] = $userName[0];
         header('Location:/eventChoice');
         exit;
     }

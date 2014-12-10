@@ -13,6 +13,7 @@
             <li class="Spacer"></li>
             <li><a href="/eventChoice"><img class="menuImg" src="/images/calendar.png" alt="Calendar Image"/>Event Choice Menu</a></li>
             <li class="Spacer"></li>
+            <li class="Label" style="font-size: 8pt; line-height: 30px; text-align: left;"><?php echo $_SESSION['user_name']?></li>
             <li><a href="/accounts/?action=logout"><img class="menuImg" src="/images/whiteLock.png" alt="Logout Image"/>Logout of <?php echo $_SESSION['orgName']?></a></li>
         <?php } else{ ?>
             <li><a href="/about"><img class="menuImg" src="/images/about.png" alt="about Tally"/>Learn About Tally</a></li>
