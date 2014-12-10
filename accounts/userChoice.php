@@ -32,7 +32,7 @@ if (!$_SESSION['is_logged_in'] == 1 ){
                             <?php echo $currentUsers?>
                         </select>
                     <label for='userPswd'>User Password<span class="required">*</span></label>
-                    <input class="field" type='password' style='<?php echo $userPswdError ?>' name='userPswd' id='userPswd' value='<?php echo $pswd?>'> 
+                    <input class="field" type='password' style='<?php echo $userPswdError ?>' name='userPswd' id='userPswd' value='<?php echo $userPswd?>'> 
                     <br>
                     <label for="action"></label>   
                     <input type="submit" name="action" id="action" value="Proceed"/>

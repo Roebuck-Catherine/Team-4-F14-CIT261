@@ -148,8 +148,8 @@ if($_GET['action'] == 'userChoice'){
 if($_POST['action']== 'Proceed'){
     $user_id = verifyInt($_POST['user']);
     
-    $pswd = addslashes($_POST['userPswd']);
-        if (empty($pswd)){
+    $userPswd = addslashes($_POST['userPswd']);
+        if (empty($userPswd)){
             $userPswdError = $errorStyle;
             $errors .= "Please enter your password<br>";
         }
@@ -163,9 +163,9 @@ if($_POST['action']== 'Proceed'){
         exit;
     }
     
-    $userPswd = getUserPswd($user_id);
+    $userPswd2 = getUserPswd($user_id);
     
-    $validPswd = verifyPassword($pswd, $userPswd[0]);
+    $validPswd = verifyPassword($userPswd, $userPswd2[0]);
     
     if($validPswd){
         $_SESSION['user_id'] = $user_id;

@@ -112,3 +112,22 @@ function resetCount(){
     page = page + '/#close';
     window.location.assign(page);
 }
+
+function submitFinalCount() {
+    try {
+        updateDatabase(localStorage.getItem("personalCount"));
+        
+        localStorage.removeItem("personalCount");
+        localStorage.removeItem("countInterval");
+        
+        var page = '/countScreen/?action=finalSubmit';
+        window.location.assign(page); 
+    }
+    catch ($error){
+        alert("Error Submiting Final Count");
+        
+        var page = window.location.href;
+        page = page + '/#close';
+        window.location.assign(page);
+    } 
+}

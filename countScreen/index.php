@@ -6,6 +6,14 @@ if (!$_SESSION) {
 
 require $_SERVER['DOCUMENT_ROOT'].'/countScreen/model.php';
 
+if ($_GET['action'] == 'finalSubmit'){
+     unset($_SESSION['eventId']);
+     unset($_SESSION['eventName']);
+     
+     header('Location: /eventChoice');
+     exit;
+}
+
 if (isset($_SESSION['eventId']) && isset($_SESSION['eventName'])){
     include 'count.php';
     exit;
