@@ -2,10 +2,11 @@
 if(!$_SESSION){
    session_start();
 }
-if ($_SESSION['is_logged_in'] == 1 ){
-    header("Location: /countScreen");
+if ($_SESSION['is_logged_in'] == 1){
+    header("Location: /eventChoice");
     exit;
  }
+
 ?>
 <!DOCTYPE html>
 <html manifest="/library/manifest.appcache">
@@ -25,9 +26,6 @@ if ($_SESSION['is_logged_in'] == 1 ){
                 <div id="errors"><?php echo $errors?></div>
                 <form method="post" action="/accounts/" id="login" name="loginForm">
                     <h1>Account Login</h1>
-
-                    <label for="name">Username<span class="required">*</span></label>
-                    <input class="field" type="text" placeholder="Your Name" autofocus style="<?php echo $usernameError ?>" name="username" id="username" value="<?php echo $username ?>">
 
                     <label for="discountAmount">Organization Name<span class="required">*</span></label>
                     <input class="field" type="text" placeholder="i.e. BYU-Idaho" style="<?php echo $orgError ?>" name="orgName" id="orgName" value="<?php echo $orgName ?>">

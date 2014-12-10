@@ -14,11 +14,12 @@ date_default_timezone_set("America/Los_Angeles");
 require $_SERVER['DOCUMENT_ROOT'].'/countScreen/model.php';
 
 // Still in progress...
-$eventId = $_SESSION['eventId'];
-$countValue = $_POST['personalCount'];
-$personCount = $_SESSION['username'];
+$user_id = verifyInt($_SESSION['user_id']);
+$eventId = verifyInt($_SESSION['eventId']);
+$countValue = verifyInt($_POST['personalCount']);
 $countDate = date("Y-m-d");
 
-$result = updateCount($eventId, $countValue, $personCount, $countDate);
+$result = updateCount($user_id, $eventId, $countValue, $countDate);
 
-return $result;
+echo $result;
+

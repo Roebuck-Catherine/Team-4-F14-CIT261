@@ -4,9 +4,11 @@ if(!$_SESSION){
 }
 if (!$_SESSION['is_logged_in'] == 1 ){
      header('Location: ../index.php');
-     echo "were not logged in";
-     exit;
  }
+if (!$_SESSION['user_id']){
+    header('Location:/accounts/?action=userChoice');
+    exit;
+}
 // include $_SERVER['DOCUMENT_ROOT'].'/eventChoice/model.php';
 
 ?>

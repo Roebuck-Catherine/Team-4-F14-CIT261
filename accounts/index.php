@@ -8,17 +8,11 @@ if(!$_SESSION){
 require $_SERVER['DOCUMENT_ROOT'].'/accounts/model.php';
 
 if($_POST['action']=='Login'){
-    $username = verifyString($_POST['username']);
     $orgName = verifyString($_POST['orgName']);
     $orgPswd = addslashes($_POST['orgPswd']);
     $staySignedIn = $_POST['StaySignedIn'];
     
     //Form Pre-Submit Validation
-    if (empty($username)){
-        $usernameError = $errorStyle;
-        $errors .= "Please enter your username<br>";
-    }
-    
     if (empty($orgName)){
         $orgError = $errorStyle;
         $errors .= "Please enter your organization name<br>";
@@ -31,7 +25,7 @@ if($_POST['action']=='Login'){
     
     if (isset($errors)){
         $count = substr_count($errors, '<br>');
-        if($count == 3){
+        if($count == 2){
             $errors = "The form cannot be left blank...<br>RED FIELDS ARE REQUIRED";
         }
         include '../index.php';
@@ -49,10 +43,9 @@ if($_POST['action']=='Login'){
     
     if($validPswd){
         $_SESSION['is_logged_in'] = 1;
-        $_SESSION['username'] = $username;
         $_SESSION['orgId'] = getOrgId($orgName);
         $_SESSION['orgName'] = $orgName;
-        header('Location:/eventChoice');
+        header('Location:/accounts/?action=userChoice');
         exit;
     }
     
@@ -140,6 +133,128 @@ if ($_POST['action']=='Create Account'){
         include 'createAccount';
         exit;
     }
+}
+
+if($_GET['action'] == 'userChoice'){
+    $users = getUsers($_SESSION['orgId']);
+    $currentUsers = "";
+        foreach ($users as $value){
+            $currentUsers .= "<option value=$value[0]>$value[1]</option>";
+        }
+    include 'userChoice.php';
+    exit;
+}
+
+if($_POST['action']== 'Proceed'){
+    $user_id = verifyInt($_POST['user']);
+    
+    $pswd = addslashes($_POST['userPswd']);
+        if (empty($pswd)){
+            $userPswdError = $errorStyle;
+            $errors .= "Please enter your password<br>";
+        }
+    if (isset($errors)){
+        $users = getUsers($_SESSION['orgId']);
+        $currentUsers = "";
+        foreach ($users as $value){
+            $currentUsers .= "<option value=$value[0]>$value[1]</option>";
+        }
+        include 'userChoice.php';
+        exit;
+    }
+    
+    $userPswd = getUserPswd($user_id);
+    
+    $validPswd = verifyPassword($pswd, $userPswd[0]);
+    
+    if($validPswd){
+        $_SESSION['user_id'] = $user_id;
+        header('Location:/eventChoice');
+        exit;
+    }
+    
+    else {
+        $errors = "Either username or password were not correct";
+        $users = getUsers($_SESSION['orgId']);
+        $currentUsers = "";
+        foreach ($users as $value){
+            $currentUsers .= "<option value=$value[0]>$value[1]</option>";
+        }
+        include 'userChoice.php';
+        exit;
+    }
+}
+
+if ($_POST['action'] == 'Create User'){
+    $firstName = verifyString($_POST['firstName']);
+    $lastName = verifyString($_POST['lastName']);
+    $email = verifyEmail($_POST['email']);
+    $pswd = addslashes($_POST['pswd']);
+    $pswd2 = addslashes($_POST['pswd2']);
+    
+      //Form Pre-Submit Validation
+    if (empty($firstName)) {
+        $firstNameError = $errorStyle;
+        $errors .= "Please enter your first name<br>";
+    }
+    if (empty($lastName)) {
+        $lastNameError = $errorStyle;
+        $errors .= "Please enter your last name<br>";
+    }
+    if (empty($email)) {
+        $emailError = $errorStyle;
+        $errors .= "Please enter your email address<br>";
+    }
+    if (empty($pswd)) {
+        $pswdError = $errorStyle;
+        $errors .= "Please enter your password<br>";
+    }
+    if (empty($pswd2)) {
+        $pswd2Error = $errorStyle;
+        $errors .= "Please verify your password<br>";
+    }
+    if ($pswd != $pswd2){
+        $pswd2Error = $errorStyle;
+        $errors .= "Passwords do not match<br>";
+    }
+    if (isset($errors)){
+        $count = substr_count($errors, '<br>');
+        if($count == 5){
+            $errors = "The form cannot be left blank...<br>RED FIELDS ARE REQUIRED";
+        }
+        $users = getUsers($_SESSION['orgId']);
+        $currentUsers = "";
+        foreach ($users as $value){
+            $currentUsers .= "<option value=$value[0]>$value[1]</option>";
+        }
+        include 'userChoice.php';
+        exit;
+    }
+    $userHashPswd = hashPassword($pswd);
+    $newUserName = $lastName . ', ' . $firstName . ' - ' . $email;
+    $org_id = $_SESSION['orgId'];
+    $joinDate = date('Y-m-d');
+    
+    $result = addOrgUser($org_id, $newUserName, $userHashPswd, $joinDate);
+    
+    if ($result){
+        $_SESSION['message'] = 'User Added Successfully';
+        $user_id = getUserId($newUserName);
+        $_SESSION['user_id'] = $user_id[0];
+        header('Location: /eventChoice');
+        exit;
+    }
+    else {
+        $errors = 'Error Adding user, Username may already be in use...';
+        $users = getUsers($_SESSION['orgId']);
+        $currentUsers = "";
+        foreach ($users as $value){
+            $currentUsers .= "<option value=$value[0]>$value[1]</option>";
+        }
+        include 'userChoice.php';
+        exit;
+    }
+    
 }
 
 if ($_GET['action'] == 'logout'){

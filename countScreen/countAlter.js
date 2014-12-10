@@ -64,16 +64,23 @@ function countAlter(value){
 
 //Help From Bryce
 function updateDatabase(count) {
+    var success ="font-size: 62px;\n\
+                background: -webkit-linear-gradient(#BFBFBF, #58A831); /* For Safari 5.1 to 6.0 */\n\
+                background: -o-linear-gradient(#BFBFBF, #58A831); /* For Opera 11.1 to 12.0 */\n\
+                background: -moz-linear-gradient(#BFBFBF, #58A831); /* For Firefox 3.6 to 15 */\n\
+                background: linear-gradient(#BFBFBF, #58A831); /* Standard syntax */";
+    var error = "background: linear-gradient(to bottom, #be1d2d 0%,#5e0f15 77%,#5b0e13 100%);\n\
+                font-size: 40px;";
     $.ajax({
             method: "POST",
             url: "/countScreen/updatePersonalCount.php",
             data: "personalCount=" + count,
             cache: false,
             success: function(){
-                alert("It Worked");
+                document.getElementById('personalCount').setAttribute("style",success);
             },
             error: function(){
-              alert("There was an error");
+                document.getElementById('personalCount').setAttribute("style",error);
             }
         });
 }
@@ -94,6 +101,12 @@ function changeInterval(value){
 function resetCount(){
     localStorage.personalCount = 0;
     document.getElementById('personalCount').innerHTML = 0;
+    try {
+        updateDatabase(0);
+    }
+    catch ($error){
+        $error = "Error Updating Database";
+    } 
     
     var page = window.location.href;
     page = page + '/#close';
