@@ -15,8 +15,9 @@ if ($_SESSION['is_logged_in'] == 1){
         <title>Tally</title>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/styles.php'; ?>
         <link rel="stylesheet" type="text/css" href="/formStyle.css">
+        <script type="text/javascript" src="/library/rememberSignOn.js"></script>
     </head>
-    <body>
+    <body onload="getSignOnInfo()">
         <div>
             <div id='header'>
                Organization Account Login
@@ -36,10 +37,9 @@ if ($_SESSION['is_logged_in'] == 1){
                     <label for="action">&nbsp;</label>
                     <input type="submit" name="action" id="action" value="Login"/>
                     
-                     <label for="signedIn" id="staySignedInText">Keep me signed in&nbsp;
-                        <input type="checkbox" name="staySingedIn" id="staySignedIn"/>
-                        </label>
-                    
+                    <label for="rememberSignOn" id="staySignedInText">Remember Login&nbsp;
+                        <input type="checkbox" name="rememberSignOn" value="check" id="rememberSignOn" onclick="signOn()"></input>
+                    </label>
                 </form>
 
                 <p class="fineprint">Don't have an account?  Create one <a href="/accounts/createAccount.php">HERE</a></p>

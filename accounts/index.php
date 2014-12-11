@@ -10,7 +10,6 @@ require $_SERVER['DOCUMENT_ROOT'].'/accounts/model.php';
 if($_POST['action']=='Login'){
     $orgName = verifyString($_POST['orgName']);
     $orgPswd = addslashes($_POST['orgPswd']);
-    $staySignedIn = $_POST['StaySignedIn'];
     
     //Form Pre-Submit Validation
     if (empty($orgName)){
@@ -30,11 +29,6 @@ if($_POST['action']=='Login'){
         }
         include '../index.php';
         exit;
-    }
-    
-    if($staySignedIn == 'checked'){
-        
-        
     }
     
     $serverPass = getServerPass($orgName);
