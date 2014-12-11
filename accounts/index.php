@@ -243,6 +243,7 @@ if ($_POST['action'] == 'Create User'){
         $_SESSION['message'] = 'User Added Successfully';
         $user_id = getUserId($newUserName);
         $_SESSION['user_id'] = $user_id[0];
+        $_SESSION['user_name'] = $newUserName;
         header('Location: /eventChoice');
         exit;
     }
