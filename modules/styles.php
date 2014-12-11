@@ -24,4 +24,5 @@
 <link rel="apple-touch-icon" href="/images/mobileIcon.png"/>
 <link rel="apple-touch-startup-image" href="/images/startUpImage.png" />
 
-
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
